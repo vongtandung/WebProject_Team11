@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>The Sheep Shop</title>
+<title>Test wed</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -287,17 +287,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</script>
 					<!-- //FlexSlider-->
 					<ul class="slides">
-						<li data-thumb="images/n1a.jpg">
-							<div class="thumb-image"> <img src="images/n1a.jpg" data-imagezoom="true" class="img-responsive"> </div>
+						<li data-thumb="images/ctt1/m1.jpg">
+							<div class="thumb-image"> <img src="images/ctt1/m1.jpg" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
-						<li data-thumb="images/n1b.jpg">
-							<div class="thumb-image"> <img src="images/n1b.jpg" data-imagezoom="true" class="img-responsive"> </div>
+						<li data-thumb="images/ctt1/m2.jpg">
+							<div class="thumb-image"> <img src="images/ctt1/m2.jpg" data-imagezoom="true" class="img-responsive"> </div>
 						</li>	
-						<li data-thumb="images/n1c.jpg">
-							<div class="thumb-image"> <img src="images/n1c.jpg" data-imagezoom="true" class="img-responsive"> </div>
+						<li data-thumb="images/ctt1/m3.jpg">
+							<div class="thumb-image"> <img src="images/ctt1/m3.jpg" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
-						<li data-thumb="images/n1d.jpg">
-							<div class="thumb-image"> <img src="images/n1d.jpg" data-imagezoom="true" class="img-responsive"> </div>
+						<li data-thumb="images/ctt1/m4.jpg">
+							<div class="thumb-image"> <img src="images/ctt1/m4.jpg" data-imagezoom="true" class="img-responsive"> </div>
 						</li>	
 					</ul>
 					<div class="clearfix"></div>
@@ -306,7 +306,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="col-md-6 single-right-left simpleCart_shelfItem animated wow slideInRight animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
 					<h3>Ví nữ Solo Shop 4 Màu</h3>
-					<p><span class="item_price">$550</span> <del>- $900</del></p>
+					<p><span class="item_price">$200</span> <del>- $350</del></p>
 					<div class="rating1">
 						<span class="starRating">
 							<input id="rating5" type="radio" name="rating" value="5">
@@ -360,36 +360,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="bootstrap-tab animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
 					<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 						<ul id="myTab" class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Description</a></li>
+							<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Thông tin sản phẩm</a></li>
 							<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Reviews(1)</a></li>
 							<li role="presentation" class="dropdown">
-								<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">Information <span class="caret"></span></a>
+								<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">Những sản phẩm liên quan <span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
-									<li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">cleanse</a></li>
-									<li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">fanny</a></li>
+									<li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">Cùng loại</a></li>
+									<li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">Cùng nhà sản xuất</a></li>
 								</ul>
 							</li>
 						</ul>
 						<div id="myTabContent" class="tab-content">
 							<div role="tabpanel" class="tab-pane fade in active bootstrap-tab-text" id="home" aria-labelledby="home-tab">
-								<h5>Product Brief Description</h5>
-								<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
-									<span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
+								<h5>Mô tả sản phẩm</h5>
+								<div class="row">
+									  <div class="col-md-4">
+									  	<ul>
+									  		<li><p>Thiết kế nhỏ gọn, thời trang xinh xắn</p></li>
+									  		<li><p>Kiểu dáng đơn giản dễ sử dụng</p></li>
+									  </ul>
+									</div>
+									  <div class="col-md-4">
+									  	<ul>
+									  		<li><p>Thích hợp để sử dụng thường xuyên</p></li>
+									  		<li><p>Đường may tỉ mỉ, tạo form ví đẹp măt</p></li>
+									  </ul>
+									</div>
+									 <div class="col-md-4"></div>
+								</div>
 							</div>
 							<div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="profile" aria-labelledby="profile-tab">
 								<div class="bootstrap-tab-text-grids">
 									<div class="bootstrap-tab-text-grid">
 										<div class="bootstrap-tab-text-grid-left">
-											<img src="images/men3.jpg" alt=" " class="img-responsive">
+											<img src="images/admin-ct.png" alt=" " class="img-responsive">
 										</div>
 										<div class="bootstrap-tab-text-grid-right">
 											<ul>
 												<li><a href="#">Admin</a></li>
 												<li><a href="#"><span class="glyphicon glyphicon-share" aria-hidden="true"></span>Reply</a></li>
 											</ul>
-											<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis 
-												suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem 
-												vel eum iure reprehenderit.</p>
+											<p>Hãy gữi những ý kiến của bạn để chúng tôi có thể hoàn thiện hơn và có thể phục vụ bạn một cách tốt hơn.</p>
 										</div>
 										<div class="clearfix"> </div>
 									</div>
@@ -407,10 +418,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 							</div>
 							<div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="dropdown1" aria-labelledby="dropdown1-tab">
-								<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+								<div class="row">
+									  <div class="col-md-2"><p>5 Sản phẩm cùng loại</p></div>
+									  <div class="col-md-2"><img src="images/ctt1/loai1.jpg" alt=" " class="img-responsive" />
+									  	<p>Ví SL02</p>
+									  </div>
+									  <div class="col-md-2"><img src="images/ctt1/loai2.jpg" alt=" " class="img-responsive" />
+									  <p>Ví STK04</p></div>
+									  <div class="col-md-2"><img src="images/ctt1/loai3.jpg" alt=" " class="img-responsive" />
+									  <p>Ví TM1</p></div>
+									  <div class="col-md-2"><img src="images/ctt1/loai4.jpg" alt=" " class="img-responsive" />
+									  <p>Ví SM01</p></div>
+									  <div class="col-md-2"><img src="images/ctt1/loai5.jpg" alt=" " class="img-responsive" />
+									  <p>Ví TC02</p></div>
+								</div>
 							</div>
 							<div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="dropdown2" aria-labelledby="dropdown2-tab">
-								<p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+								<div class="row">
+									  <div class="col-md-2"><p>5 Sản phẩm cùng NSX</p></div>
+									  <div class="col-md-2"><img src="images/ctt1/nsx1.jpg" alt=" " class="img-responsive" />
+									  	<p>Ví NSX-TT01</p>
+									  </div>
+									  <div class="col-md-2"><img src="images/ctt1/nsx2.jpg" alt=" " class="img-responsive" />
+									  <p>Ví NSX-TT02</p></div>
+									  <div class="col-md-2"><img src="images/ctt1/nsx3.jpg" alt=" " class="img-responsive" />
+									  <p>Ví NSX-TH03</p></div>
+									  <div class="col-md-2"><img src="images/ctt1/nsx4.jpg" alt=" " class="img-responsive" />
+									  <p>Ví NSX-TC04</p></div>
+									  <div class="col-md-2"><img src="images/ctt1/nsx5.jpg" alt=" " class="img-responsive" />
+									  <p>Ví NSX-TX05</p></div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -419,162 +456,165 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //single -->
 <!-- //product-nav -->
-<div class="coupons">
-	<div class="container">
-		<div class="coupons-grids text-center">
-			<div class="col-md-3 coupons-gd">
-				<h3>Buy your product in a simple way</h3>
-			</div>
-			<div class="col-md-3 coupons-gd">
-				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-				<h4>LOGIN TO YOUR ACCOUNT</h4>
-				<p>Neque porro quisquam est, qui dolorem ipsum quia dolor
-			sit amet, consectetur.</p>
-			</div>
-			<div class="col-md-3 coupons-gd">
-				<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-				<h4>SELECT YOUR ITEM</h4>
-				<p>Neque porro quisquam est, qui dolorem ipsum quia dolor
-			sit amet, consectetur.</p>
-			</div>
-			<div class="col-md-3 coupons-gd">
-				<span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
-				<h4>MAKE PAYMENT</h4>
-				<p>Neque porro quisquam est, qui dolorem ipsum quia dolor
-			sit amet, consectetur.</p>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
-</div>
-<!-- footer -->
-<div class="footer">
-	<div class="container">
-		<div class="col-md-3 footer-left">
-			<h2><a href="index.html"><img src="images/logo3.jpg" alt=" " /></a></h2>
-			<p>Neque porro quisquam est, qui dolorem ipsum quia dolor
-			sit amet, consectetur, adipisci velit, sed quia non 
-			numquam eius modi tempora incidunt ut labore 
-			et dolore magnam aliquam quaerat voluptatem.</p>
-		</div>
-		<div class="col-md-9 footer-right">
-			<div class="col-sm-6 newsleft">
-				<h3>SIGN UP FOR NEWSLETTER !</h3>
-			</div>
-			<div class="col-sm-6 newsright">
-				<form>
-					<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-					<input type="submit" value="Submit">
-				</form>
-			</div>
-			<div class="clearfix"></div>
-			<div class="sign-grds">
-				<div class="col-md-4 sign-gd">
-					<h4>Information</h4>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="mens.html">Men's Wear</a></li>
-						<li><a href="womens.html">Women's Wear</a></li>
-						<li><a href="electronics.html">Electronics</a></li>
-						<li><a href="codes.html">Short Codes</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-				
-				<div class="col-md-4 sign-gd-two">
-					<h4>Store Information</h4>
-					<ul>
-						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : 1234k Avenue, 4th block, <span>Newyork City.</span></li>
-						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a href="mailto:info@example.com">info@example.com</a></li>
-						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : +1234 567 567</li>
-					</ul>
-				</div>
-				<div class="col-md-4 sign-gd flickr-post">
-					<h4>Flickr Posts</h4>
-					<ul>
-						<li><a href="single.html"><img src="images/b15.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b16.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b17.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b18.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b15.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b16.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b17.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b18.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b15.jpg" alt=" " class="img-responsive" /></a></li>
-					</ul>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		<p class="copy-right">&copy 2016 Smart Shop. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-	</div>
-</div>
-<!-- //footer -->
-<!-- login -->
-			<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content modal-info">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-						</div>
-						<div class="modal-body modal-spa">
-							<div class="login-grids">
-								<div class="login">
-									<div class="login-bottom">
-										<h3>Sign up for free</h3>
-										<form>
-											<div class="sign-up">
-												<h4>Email :</h4>
-												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
-											</div>
-											<div class="sign-up">
-												<h4>Password :</h4>
-												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												
-											</div>
-											<div class="sign-up">
-												<h4>Re-type Password :</h4>
-												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												
-											</div>
-											<div class="sign-up">
-												<input type="submit" value="REGISTER NOW" >
-											</div>
-											
-										</form>
-									</div>
-									<div class="login-right">
-										<h3>Sign in with your account</h3>
-										<form>
-											<div class="sign-in">
-												<h4>Email :</h4>
-												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
-											</div>
-											<div class="sign-in">
-												<h4>Password :</h4>
-												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												<a href="#">Forgot password?</a>
-											</div>
-											<div class="single-bottom">
-												<input type="checkbox"  id="brand" value="">
-												<label for="brand"><span></span>Remember Me.</label>
-											</div>
-											<div class="sign-in">
-												<input type="submit" value="SIGNIN" >
-											</div>
-										</form>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+ <div class="coupons">
+        <div class="container">
+            <div class="coupons-grids text-center">
+                <div class="col-md-3 coupons-gd">
+                    <h3>Mua sản Phẩm chỉ với 1 cú click chuột</h3>
+                </div>
+                <div class="col-md-3 coupons-gd">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    <h4>Đăng nhập bằng tài khoản của bạn</h4>
+                    <p>Mua sắm chưa bao giờ là đơn giản như bây giờ.</p>
+                </div>
+                <div class="col-md-3 coupons-gd">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                    <h4>Lựa chọn sản phẩm</h4>
+                    <p>Với đa dạng các sản phẩm và mặt hàng, chúng tôi sẽ mang đến cho bạn thời gian mua sắm tuyệt nhất</p>
+                </div>
+                <div class="col-md-3 coupons-gd">
+                    <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
+                    <h4>Thanh Toán</h4>
+                    <p>Thanh toán cực đơn giản với trả trước hoặc trả khi nhận hàng</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="col-md-3 footer-left">
+                <h2>
+                    <a href="index.html"><img src="images/logo.png" width="80%" alt=" " /></a>
+                </h2>
+                <p>The sheep shop sẽ mang đến cho bạn những giây phút mua sắm tuyệt vời nhất với các trải nghiệm tuyệt vời cùng cách làm việc chuyên nghiệp.</p>
+            </div>
+            <div class="col-md-9 footer-right">
+
+                <div class="clearfix"></div>
+                <div class="sign-grds">
+                    <div class="col-md-4 sign-gd">
+                        <h4>Thông Tin</h4>
+                        <ul>
+                            <li><a href="index.html">Trang Chủ</a></li>
+                            <li><a href="mens.html">MEN</a></li>
+                            <li><a href="womens.html">WOMEN</a></li>
+                            <li><a href="electronics.html">KID</a></li>
+                            <li><a href="codes.html">UNISEX</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 sign-gd-two">
+                        <h4>Thông Tin Shop</h4>
+                        <ul>
+                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : 227, Nguyễn văn Cừ <span>Thành Phố Hồ Chí Minh</span></li>
+                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a href="mailto:thesheepshop@gmail.com">thesheep@gmail.com</a></li>
+                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : 0123456789</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 sign-gd flickr-post">
+                        <h4>Hình ảnh</h4> <ul>
+                            <li>
+                                <a href="single.html"><img src="images/f1.jpg" alt=" " class="img-responsive" /></a>
+                            </li>
+                            <li>
+                                <a href="single.html"><img src="images/f2.jpg" alt=" " class="img-responsive" /></a>
+                            </li>
+                            <li>
+                                <a href="single.html"><img src="images/f3.jpg" alt=" " class="img-responsive" /></a>
+                            </li>
+                            <li>
+                                <a href="single.html"><img src="images/f4.jpg" alt=" " class="img-responsive" /></a>
+                            </li>
+                            <li>
+                                <a href="single.html"><img src="images/f5.jpg" alt=" " class="img-responsive" /></a>
+                            </li>
+                            <li>
+                                <a href="single.html"><img src="images/f6.jpg" alt=" " class="img-responsive" /></a>
+                            </li>
+                            <li>
+                                <a href="single.html"><img src="images/f7.jpg" alt=" " class="img-responsive" /></a>
+                            </li>
+                            <li>
+                                <a href="single.html"><img src="images/f8.jpg" alt=" " class="img-responsive" /></a>
+                            </li>
+                            <li>
+                                <a href="single.html"><img src="images/f9.jpg" alt=" " class="img-responsive" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <p class="copy-right">&copy 2018 The Sheep Shop. All rights reserved | Design by <a href="#">TheSheep</a></p>
+        </div>
+    </div>
+    <!-- //footer -->
+    <!-- login -->
+    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-info">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body modal-spa">
+                    <div class="login-grids">
+                        <div class="login">
+                            <div class="login-bottom">
+                                <h3>Sign up for free</h3>
+                                <form>
+                                    <div class="sign-up">
+                                        <h4>Email :</h4>
+                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
+                                    </div>
+                                    <div class="sign-up">
+                                        <h4>Password :</h4>
+                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+
+                                    </div>
+                                    <div class="sign-up">
+                                        <h4>Re-type Password :</h4>
+                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+
+                                    </div>
+                                    <div class="sign-up">
+                                        <input type="submit" value="REGISTER NOW">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="login-right">
+                                <h3>Sign in with your account</h3>
+                                <form>
+                                    <div class="sign-in">
+                                        <h4>Email :</h4>
+                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
+                                    </div>
+                                    <div class="sign-in">
+                                        <h4>Password :</h4>
+                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+                                        <a href="#">Forgot password?</a>
+                                    </div>
+                                    <div class="single-bottom">
+                                        <input type="checkbox" id="brand" value="">
+                                        <label for="brand"><span></span>Remember Me.</label>
+                                    </div>
+                                    <div class="sign-in">
+                                        <input type="submit" value="SIGNIN">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <!-- //login -->
 </body>
 </html>
-
-
