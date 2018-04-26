@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>History</title>
+	<title>Bill Details</title>
 	<!-- for-mobile-apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -110,7 +110,7 @@
 				</div>
 			</div>
 			<br>
-			<br>ứ
+			<br>
 			<div class="col-md-12 customer-info" style="margin-bottom:20px">
 				<h4 class="col-md-3">Họ Và Tên Khách hàng: </h4>
 				<a class="col-md-4">Vòng Tần Dũng</a>
@@ -152,7 +152,7 @@
 								<td>1</td>
 								<td>N124</td>
 								<td>
-									<a href="">Túi Xách Disney</a>
+									<a href="single.html">Túi Xách Disney</a>
 								</td>
 								<td>2</td>
 								<td>200.000đ</td>
@@ -162,7 +162,7 @@
 								<td>2</td>
 								<td>K124</td>
 								<td>
-									<a href="">Balo Hàn Quốc</a>
+									<a href="single.html">Balo Hàn Quốc</a>
 								</td>
 								<td>1</td>
 								<td>400.000đ</td>
@@ -172,7 +172,7 @@
 								<td>3</td>
 								<td>N24</td>
 								<td>
-									<a href="">Balo Liên Minh</a>
+									<a href="single.html">Balo Liên Minh</a>
 								</td>
 								<td>2</td>
 								<td>230.000đ</td>
@@ -263,10 +263,10 @@
 								<a href="womens.html">WOMEN</a>
 							</li>
 							<li>
-								<a href="electronics.html">KID</a>
+								<a href="kids.html">KID</a>
 							</li>
 							<li>
-								<a href="codes.html">Unisex</a>
+								<a href="unisex.html">Unisex</a>
 							</li>
 							<li>
 								<a href="contact.html">Contact</a>
@@ -351,77 +351,45 @@
 	<!-- //footer -->
 	<!-- login -->
 	<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content modal-info">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body modal-spa">
-					<div class="login-grids">
-						<div class="login">
-							<div class="login-bottom">
-								<h3>Sign up for free</h3>
-								<form>
-									<div class="sign-up">
-										<h4>Email :</h4>
-										<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}"
-										    required="">
-									</div>
-									<div class="sign-up">
-										<h4>Password :</h4>
-										<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"
-										    required="">
-
-									</div>
-									<div class="sign-up">
-										<h4>Re-type Password :</h4>
-										<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"
-										    required="">
-
-									</div>
-									<div class="sign-up">
-										<input type="submit" value="REGISTER NOW">
-									</div>
-
-								</form>
-							</div>
-							<div class="login-right">
-								<h3>Sign in with your account</h3>
-								<form>
-									<div class="sign-in">
-										<h4>Email :</h4>
-										<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}"
-										    required="">
-									</div>
-									<div class="sign-in">
-										<h4>Password :</h4>
-										<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"
-										    required="">
-										<a href="#">Forgot password?</a>
-									</div>
-									<div class="single-bottom">
-										<input type="checkbox" id="brand" value="">
-										<label for="brand">
-											<span></span>Remember Me.</label>
-									</div>
-									<div class="sign-in">
-										<input type="submit" value="SIGNIN">
-									</div>
-								</form>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<p>By logging in you agree to our
-							<a href="#">Terms and Conditions</a> and
-							<a href="#">Privacy Policy</a>
-						</p>
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content modal-info">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+					<div class="modal-body modal-spa">
+						<div class="login-grids">
+							<div class="login">
+								<img src="./images/logo.png">
+								<div class="login-right">
+									<h3>Sign in with your account</h3>
+									<form>
+										<div class="sign-in">
+											<h4>Email :</h4>
+											<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
+										</div>
+										<div class="sign-in">
+											<h4>Password :</h4>
+											<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+											<a href="#">Forgot password?</a>
+										</div>
+										<div class="single-bottom">
+											<input type="checkbox" id="brand" value="">
+											<label for="brand"><span></span>Remember Me.</label>
+										</div>
+										<div class="sign-in">
+												<button type="button" class="btn btn-warning"  onclick="window.location.href='index-dn.html'">SIGN IN</button>
+										</div>
+										<br>
+										<div class="sign-in">
+												<button type="button" class="btn btn-warning"  onclick="window.location.href='createacount.html'">Create New Account</button>
+										</div>
+									</form>
+								</div>
+								<div class="clearfix"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 	<!-- //login -->
 </body>
 
