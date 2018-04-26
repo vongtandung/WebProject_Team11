@@ -126,7 +126,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <ul class="nav navbar-nav menu__list">
                                 <li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Trang Chủ <span class="sr-only">(current)</span></a></li>
                                 <li class="dropdown menu__item">
-                                    <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MEN <span class="caret"></span></a>
+                                    <a href="men.html" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MEN <span class="caret"></span></a>
                                     <ul class="dropdown-menu multi-column columns-3">
                                         <div class="row">
                                             <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
@@ -159,7 +159,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </ul>
                                 </li>
                                 <li class="dropdown menu__item">
-                                    <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">WOMEN <span class="caret"></span></a>
+                                    <a href="womens.html" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">WOMEN <span class="caret"></span></a>
                                     <ul class="dropdown-menu multi-column columns-3">
                                         <div class="row">
                                             <div class="col-sm-3 multi-gd-img">
@@ -190,7 +190,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </ul>
                                 </li>
                                 <li class="dropdown menu__item">
-                                    <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">KID <span class="caret"></span></a>
+                                    <a href="kids.html" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">KID <span class="caret"></span></a>
                                     <ul class="dropdown-menu multi-column columns-3">
                                         <div class="row">
                                             <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
@@ -220,7 +220,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </ul>
                                 </li>
                                 <li class="dropdown menu__item">
-                                    <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UNISEX <span class="caret"></span></a>
+                                    <a href="mens.html" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UNISEX <span class="caret"></span></a>
                                     <ul class="dropdown-menu multi-column columns-3">
                                         <div class="row">
                                             <div class="col-sm-3 multi-gd-img">
@@ -1204,7 +1204,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- //footer -->
     <!-- login -->
     <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content modal-info">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -1212,29 +1212,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="modal-body modal-spa">
                     <div class="login-grids">
                         <div class="login">
-                            <div class="login-bottom">
-                                <h3>Sign up for free</h3>
-                                <form>
-                                    <div class="sign-up">
-                                        <h4>Email :</h4>
-                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
-                                    </div>
-                                    <div class="sign-up">
-                                        <h4>Password :</h4>
-                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-
-                                    </div>
-                                    <div class="sign-up">
-                                        <h4>Re-type Password :</h4>
-                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-
-                                    </div>
-                                    <div class="sign-up">
-                                        <input type="submit" value="REGISTER NOW">
-                                    </div>
-
-                                </form>
-                            </div>
+                            <img src="./images/logo.png">
                             <div class="login-right">
                                 <h3>Sign in with your account</h3>
                                 <form>
@@ -1252,19 +1230,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <label for="brand"><span></span>Remember Me.</label>
                                     </div>
                                     <div class="sign-in">
-                                        <input type="submit" value="SIGNIN">
+                                        <button type="submit" class="btn btn-warning">SIGN IN</button>
+                                    </div>
+                                    <br>
+                                    <div class="sign-in">
+                                        <button type="button" class="btn btn-warning" onclick="window.location.href='createacount.html'">Create New Account</button>
                                     </div>
                                 </form>
                             </div>
                             <div class="clearfix"></div>
                         </div>
-                        <p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
                     </div>
                 </div>
             </div>
+            <!-- //login -->
+            <!--//create-->
+
         </div>
-    </div>
-    <!-- //login -->
 </body>
 
 </html>
