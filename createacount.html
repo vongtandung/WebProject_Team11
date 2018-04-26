@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -15,7 +17,9 @@
 			window.scrollTo(0, 1);
 		}
 	</script>
+
 	<!-- //for-mobile-apps -->
+
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- pignose css -->
 	<link href="css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
@@ -212,6 +216,15 @@
 						<div class="col-xs-6">
 							<input type="password" class="form-control" id="repassword" onchange="check()"/>
 						</div>
+					</div>
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="form-group">
+						<div class="g-recaptcha" data-sitekey="6LdntFUUAAAAAKx8KqbmaVR8YpMzWjK5lzYyB196" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+						<input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
+						<div class="help-block with-errors"></div>
 					</div>
 					<br>
 					<br>
@@ -426,6 +439,12 @@
 		}
 	}
 </script>
+ <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src='https://www.google.com/recaptcha/api.js'></script>
+ <script src="validator.js"></script>
+ <script src="contact.js"></script>
 </body>
+
 
 </html>
