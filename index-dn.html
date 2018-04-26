@@ -83,24 +83,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="clearfix"></div>
                 </form>
             </div>
-            <div class="col-md-3 header-right footer-bottom">
-                <ul>
-                    <li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>Login</span></a>
-
-                    </li>
-                    <li>
-                        <a class="fb" href="#"></a>
-                    </li>
-                    <li>
-                        <a class="twi" href="#"></a>
-                    </li>
-                    <li>
-                        <a class="insta" href="#"></a>
-                    </li>
-                    <li>
-                        <a class="you" href="#"></a>
-                    </li>
-                </ul>
+            <div class="login button mr-3">
+                    <div class="btn-group">
+                            <button type="button" class="btn btn-warning btn-lg dropdown-toggle  margin-left" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img height="50dp" width="50dp" src="./images/admin-ct.png" />
+                              Tần Dũng <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a href="profile.html" target=_blank>Cập Nhật Thông Tin</a></li>
+                              <li><a href="#"  data-toggle="modal" data-target="#changepass">Thay Đổi Mật Khẩu</a></li>
+                              <li><a href="history.html" target=_blank>Lịch Sử Mua Hàng</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="index.html">Đăng Xuất</a></li>
+                            </ul>
+                          </div>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -126,11 +122,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <ul class="nav navbar-nav menu__list">
                                 <li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Trang Chủ <span class="sr-only">(current)</span></a></li>
                                 <li class="dropdown menu__item">
-                                    <a href="men.html" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MEN <span class="caret"></span></a>
+                                    <a href="men.html" target=_blank class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MEN <span class="caret"></span></a>
                                     <ul class="dropdown-menu multi-column columns-3">
                                         <div class="row">
                                             <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                                <a href="mens.html"><img src="images/men.jpg" alt=" " /></a>
+                                                <a href="mens.html "><img src="images/men.jpg" alt=" " /></a>
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
@@ -234,14 +230,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-<<<<<<< HEAD
-                                                    <li><a href="unisex.html">Fila</a></li>
-                                                    <li><a href="unisex.html">Praza</a></li>
-                                                    <li><a href="unisex.html">LilyHood</a></li>
-                                                    <li><a href="unisex.html">HARAS</a></li>
-                                                    <li><a href="unisex.html">Zodiac</a></li>
-                                                    <li><a href="unisex.html">Leorno</a></li>
-=======
                                                     <li><a href="mens.html">OEM</a></li>
                                                     <li><a href="mens.html">Sportkinger</a></li>
                                                     <li><a href="mens.html">FashionDoor</a></li>
@@ -249,7 +237,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                     <li><a href="mens.html">World Deal</a></li>
                                                     <li><a href="mens.html">Free Knight</a></li>
                                                     <li><a href="mens.html">ANCOM GL</a></li>
->>>>>>> upstream/master
                                                 </ul>
                                             </div>
                                             <div class="col-sm-6 multi-gd-img multi-gd-text ">
@@ -1157,8 +1144,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <li><a href="index.html">Trang Chủ</a></li>
                             <li><a href="mens.html">MEN</a></li>
                             <li><a href="womens.html">WOMEN</a></li>
-                            <li><a href="kids.html">KID</a></li>
-                            <li><a href="unisex.html">UNISEX</a></li>
+                            <li><a href="electronics.html">KID</a></li>
+                            <li><a href="codes.html">UNISEX</a></li>
                             <li><a href="contact.html">CONTACT</a></li>
                         </ul>
                     </div>
@@ -1212,18 +1199,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div>
     <!-- //footer -->
     <!-- login -->
-    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="changepass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content modal-info">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body modal-spa">
-                    <div class="login-grids">
-                        <div class="login">
+                    <div class="change-grids">
+                        <div class="change">
                             <img src="./images/logo.png">
                             <div class="login-right">
-                                <h3>Sign in with your account</h3>
+                                <h3>Change your Account</h3>
                                 <form>
                                     <div class="sign-in">
                                         <h4>Email :</h4>
@@ -1232,18 +1219,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <div class="sign-in">
                                         <h4>Password :</h4>
                                         <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-                                        <a href="#">Forgot password?</a>
-                                    </div>
-                                    <div class="single-bottom">
-                                        <input type="checkbox" id="brand" value="">
-                                        <label for="brand"><span></span>Remember Me.</label>
                                     </div>
                                     <div class="sign-in">
-                                            <button type="button" class="btn btn-warning"  onclick="window.location.href='index-dn.html'">SIGN IN</button>
-                                    </div>
-                                    <br>
+                                            <h4>New Password :</h4>
+                                            <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+                                        </div>
+                                        <div class="sign-in">
+                                                <h4>Retype New Password :</h4>
+                                                <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+                                            </div>
                                     <div class="sign-in">
-                                            <button type="button" class="btn btn-warning"  onclick="window.location.href='createacount.html'">Create New Account</button>
+                                            <button type="submit" class="btn btn-warning"  onclick="window.location.href='index.html'">Change My Password</button>
                                     </div>
                                 </form>
                             </div>
