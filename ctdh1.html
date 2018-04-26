@@ -1,288 +1,428 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>History</title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<!-- pignose css -->
-<link href="css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
+	<title>History</title>
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //for-mobile-apps -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- pignose css -->
+	<link href="css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
 
 
-<!-- //pignose css -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<!-- //js -->
-<!-- cart -->
+	<!-- //pignose css -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- //js -->
+	<!-- cart -->
 	<script src="js/simpleCart.min.js"></script>
-<!-- cart -->
-<!-- for bootstrap working -->
+	<!-- cart -->
+	<!-- for bootstrap working -->
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-<!-- //for bootstrap working -->
-<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
-<script src="js/jquery.easing.min.js"></script>
+	<!-- //for bootstrap working -->
+	<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic'
+	    rel='stylesheet' type='text/css'>
+	<script src="js/jquery.easing.min.js"></script>
 </head>
+
 <body>
-<!-- header -->
-<div class="header">
-	<div class="container">
-		<ul>
-			<li><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Vận chuyển nhanh chóng và an toàn</li>
-			<li><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Miễn phí vận chuyển</li>
-			<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:Thesheepshop@gmail.com">Thesheepshop@gmail.com</a></li>
-		</ul>
-	</div>
-</div>
-<!-- //header -->
-<!-- header-bot -->
-<div class="header-bot">
-	<div class="container">
-		<div class="col-md-3 header-left">
-			<h1><a href="index.html"><img src="images/logo.png"></a></h1>
-		</div>
-		<div class="col-md-6 header-middle">
-			<form>
-				<div class="search">
-					<input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
-				</div>
-				<div class="clearfix"></div>
-			</form>
-		</div>
-		<div class="col-md-3 header-right footer-bottom">
+	<!-- header -->
+	<div class="header">
+		<div class="container">
 			<ul>
-				<li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>Login</span></a>
-					
+				<li>
+					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>Vận chuyển nhanh chóng và an toàn</li>
+				<li>
+					<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Miễn phí vận chuyển</li>
+				<li>
+					<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+					<a href="mailto:Thesheepshop@gmail.com">Thesheepshop@gmail.com</a>
 				</li>
-				<li><a class="fb" href="#"></a></li>
-				<li><a class="twi" href="#"></a></li>
-				<li><a class="insta" href="#"></a></li>
-				<li><a class="you" href="#"></a></li>
 			</ul>
 		</div>
-		<div class="clearfix"></div>
 	</div>
-</div>
-<!-- //header-bot -->
-<!-- container -->
-
-<div class="product-easy">
-	<div class="container">
-		
-		<div class="page-head">
-			<div class="container">
-				<h3>Hóa Đơn Mua Hàng</h3>
+	<!-- //header -->
+	<!-- header-bot -->
+	<div class="header-bot">
+		<div class="container">
+			<div class="col-md-3 header-left">
+				<h1>
+					<a href="index.html">
+						<img src="images/logo.png">
+					</a>
+				</h1>
 			</div>
+			<div class="col-md-6 header-middle">
+				<form>
+					<div class="search">
+						<input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
+					</div>
+					<div class="clearfix"></div>
+				</form>
+			</div>
+			<div class="col-md-3 header-right footer-bottom">
+				<ul>
+					<li>
+						<a href="#" class="use1" data-toggle="modal" data-target="#myModal4">
+							<span>Login</span>
+						</a>
+
+					</li>
+					<li>
+						<a class="fb" href="#"></a>
+					</li>
+					<li>
+						<a class="twi" href="#"></a>
+					</li>
+					<li>
+						<a class="insta" href="#"></a>
+					</li>
+					<li>
+						<a class="you" href="#"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
 		</div>
-		<div class="col-md-12 customer-info" style="margin-bottom:10px">
-			<h4 class="col-md-3">Họ Và Tên Khách hàng: </h4>
-			<a class="col-md-4">Vòng Tần Dũng</a>
-			<h4 class="col-md-2">Mã Khách hàng: </h4>
-			<a class="col-md-2">KH1204</a>
-		</div>
-		<br>
-		<div class="col-md-12 customer-info"style="margin-bottom:10px">
+	</div>
+	<!-- //header-bot -->
+	<!-- container -->
+
+	<div class="product-easy">
+		<div class="container">
+
+			<div class="page-head">
+				<div class="container">
+					<h3>Hóa Đơn Mua Hàng</h3>
+				</div>
+			</div>
+			<br>
+			<br>ứ
+			<div class="col-md-12 customer-info" style="margin-bottom:20px">
+				<h4 class="col-md-3">Họ Và Tên Khách hàng: </h4>
+				<a class="col-md-4">Vòng Tần Dũng</a>
+				<h4 class="col-md-2">Mã Khách hàng: </h4>
+				<a class="col-md-2">KH1204</a>
+			</div>
+			<br>
+			<div class="col-md-12 customer-info" style="margin-bottom:20px">
 				<h4 class="col-md-3">Địa Chỉ: </h4>
 				<a class="col-md-4"> 100/11 Nguyễn ngọc lộc, Quận 10</a>
 				<h4 class="col-md-2">Số Điện Thoại: </h4>
 				<a class="col-md-2">0123456789</a>
 			</div>
 			<div class="col-md-12 customer-info">
-					<h4 class="col-md-3">Tình Trạng Giao Hàng:  </h4>
-					<a class="col-md-4"> Đang Đóng Gói</a>
-					<h4 class="col-md-2">Mã Hóa Đơn: </h4>
-					<a class="col-md-2">123</a>
-				</div>
-		<!-- //banner -->
-		<div class="bill">
-			<div class="container">
-				<div class="table-responsive checkout-right animated wow slideInUp">
-					<table class="timetable_sub table-hover">
-						<thead>
+				<h4 class="col-md-3">Tình Trạng Giao Hàng: </h4>
+				<a class="col-md-4"> Đang Đóng Gói</a>
+				<h4 class="col-md-2">Mã Hóa Đơn: </h4>
+				<a class="col-md-2">123</a>
+			</div>
+			<br>
+			<br>
+
+			<!-- //banner -->
+			<div class="col-md-12 bill">
+				<div class="container"style="margin-top:20dp">
+					<div class="table-responsive checkout-right animated wow slideInUp">
+						<table class="timetable_sub table-hover">
+							<thead>
+								<tr>
+									<th>Số Thứ Tự</th>
+									<th>Mã Mặt Hàng</th>
+									<th>Tên Mặt Hàng</th>
+									<th>Số Lượng</th>
+									<th>Đơn Giá</th>
+									<th>Thành Tiền</th>
+								</tr>
+							</thead>
 							<tr>
-								<th>Số Thứ Tự</th>
-								<th>Mã Mặt Hàng</th>
-								<th>Tên Mặt Hàng</th>
-								<th>Số Lượng</th>
-								<th>Đơn Giá</th>
-								<th>Thành Tiền</th>
-							</tr>
-						</thead>
-						<tr >
 								<td>1</td>
 								<td>N124</td>
-								<td><a href="">Túi Xách Disney</a></td>
+								<td>
+									<a href="">Túi Xách Disney</a>
+								</td>
 								<td>2</td>
 								<td>200.000đ</td>
 								<td>400.000đ</td>
-						</tr>
-						<tr >
+							</tr>
+							<tr>
 								<td>2</td>
 								<td>K124</td>
-								<td><a href="">Balo Hàn Quốc</a></td>
+								<td>
+									<a href="">Balo Hàn Quốc</a>
+								</td>
 								<td>1</td>
 								<td>400.000đ</td>
 								<td>400.000đ</td>
-						</tr>
-						<tr >
+							</tr>
+							<tr>
 								<td>3</td>
 								<td>N24</td>
-								<td><a href="">Balo Liên Minh</a></td>
+								<td>
+									<a href="">Balo Liên Minh</a>
+								</td>
 								<td>2</td>
 								<td>230.000đ</td>
 								<td>460.000đ</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-		</div>	
-		
-	</div>
-	<div class="bill-left">
-			<div class="bill-left-basket animated wow slideInLeft">
-				<h4>Tổng</h4>
-				<ul>
-					<li>Số Lượng Mặt Hàng:
-						<span>5</span>
-					</li>
-					<li>Ngày Đặt:
-						<span>22/04/2018</span>
-					</li>
-					<li>Tổng Hóa Đơn:
-						<span>1.260.000VNĐ</span>
-					</li>
-				</ul>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-</div>
-
-
-
-
-
-
-<div class="footer">
-	<div class="container">
-		<div class="col-md-3 footer-left">
-			<h2><a href="index.html"><img src="images/logo.png" alt=" " /></a></h2>
-			<p>The sheep shop sẽ mang đến cho bạn những giây phút mua sắm tuyệt vời nhất
-				 với các trải nghiệm tuyệt vời cùng cách làm việc chuyên nghiệp.</p>
-		</div>
-		<div class="col-md-9 footer-right">
-			
-			<div class="clearfix"></div>
-			<div class="sign-grds">
-				<div class="col-md-4 sign-gd">
-					<h4>Thông Tin</h4>
-					<ul>
-						<li><a href="index.html">Trang Chủ</a></li>
-						<li><a href="mens.html">MEN</a></li>
-						<li><a href="womens.html">WOMEN</a></li>
-						<li><a href="electronics.html">KID</a></li>
-						<li><a href="codes.html">Unisex</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-				
-				<div class="col-md-4 sign-gd-two">
-					<h4>Thông Tin Shop</h4>
-					<ul>
-						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : 227, Nguyễn văn Cừ <span>Thành Phố Hồ Chí Minh</span></li>
-						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a href="mailto:thesheepshop@gmail.com">thesheepshop@gamil.com</a></li>
-						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : 0123456789</li>
-					</ul>
-				</div>
-				<div class="col-md-4 sign-gd flickr-post">
-					<h4>Hình ảnh</h4>
-					<ul>
-						<li><a href="single.html"><img src="images/f1.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/f2.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/f3.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/f4.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/f5.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/f6.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/f7.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/f8.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/f9.jpg" alt=" " class="img-responsive" /></a></li>
-					</ul>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		<p class="copy-right">copy 2018 The Sheep Shop. All rights reserved | Design by <a href="#">TheSHeep</a></p>
-	</div>
-</div>
-<!-- //footer -->
-<!-- login -->
-			<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content modal-info">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-						</div>
-						<div class="modal-body modal-spa">
-							<div class="login-grids">
-								<div class="login">
-									<div class="login-bottom">
-										<h3>Sign up for free</h3>
-										<form>
-											<div class="sign-up">
-												<h4>Email :</h4>
-												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
-											</div>
-											<div class="sign-up">
-												<h4>Password :</h4>
-												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												
-											</div>
-											<div class="sign-up">
-												<h4>Re-type Password :</h4>
-												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												
-											</div>
-											<div class="sign-up">
-												<input type="submit" value="REGISTER NOW" >
-											</div>
-											
-										</form>
-									</div>
-									<div class="login-right">
-										<h3>Sign in with your account</h3>
-										<form>
-											<div class="sign-in">
-												<h4>Email :</h4>
-												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
-											</div>
-											<div class="sign-in">
-												<h4>Password :</h4>
-												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												<a href="#">Forgot password?</a>
-											</div>
-											<div class="single-bottom">
-												<input type="checkbox"  id="brand" value="">
-												<label for="brand"><span></span>Remember Me.</label>
-											</div>
-											<div class="sign-in">
-												<input type="submit" value="SIGNIN" >
-											</div>
-										</form>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
-							</div>
-						</div>
+							</tr>
+						</table>
 					</div>
 				</div>
 			</div>
-<!-- //login -->
+
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="bill-left">
+				<div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
+						<h4>Tổng</h4>
+						<ul>
+							<li>Số Lượng Mặt Hàng:
+								<span>5</span>
+							</li>
+							<li>Ngày Đặt:
+								<span>22/04/2018</span>
+							</li>
+							<li>Tổng Hóa Đơn:
+								<span>1.260.000VNĐ</span>
+							</li>
+						</ul>
+					</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="coupons">
+		<div class="container">
+			<div class="coupons-grids text-center">
+				<div class="col-md-3 coupons-gd">
+					<h3>Mua sản Phẩm chỉ với 1 cú click chuột</h3>
+				</div>
+				<div class="col-md-3 coupons-gd">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+					<h4>Đăng nhập bằng tài khoản của bạn</h4>
+					<p>Mua sắm chưa bao giờ là đơn giản như bây giờ.</p>
+				</div>
+				<div class="col-md-3 coupons-gd">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+					<h4>Lựa chọn sản phẩm</h4>
+					<p>Với đa dạng các sản phẩm và mặt hàng, chúng tôi sẽ mang đến cho bạn thời gian mua sắm tuyệt nhất</p>
+				</div>
+				<div class="col-md-3 coupons-gd">
+					<span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
+					<h4>Thanh Toán</h4>
+					<p>Thanh toán cực đơn giản với trả trước hoặc trả khi nhận hàng</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-3 footer-left">
+				<h2>
+					<a href="index.html">
+						<img src="images/logo.png" alt=" " />
+					</a>
+				</h2>
+				<p>The sheep shop sẽ mang đến cho bạn những giây phút mua sắm tuyệt vời nhất với các trải nghiệm tuyệt vời cùng cách làm
+					việc chuyên nghiệp.</p>
+			</div>
+			<div class="col-md-9 footer-right">
+
+				<div class="clearfix"></div>
+				<div class="sign-grds">
+					<div class="col-md-4 sign-gd">
+						<h4>Thông Tin</h4>
+						<ul>
+							<li>
+								<a href="index.html">Trang Chủ</a>
+							</li>
+							<li>
+								<a href="mens.html">MEN</a>
+							</li>
+							<li>
+								<a href="womens.html">WOMEN</a>
+							</li>
+							<li>
+								<a href="electronics.html">KID</a>
+							</li>
+							<li>
+								<a href="codes.html">Unisex</a>
+							</li>
+							<li>
+								<a href="contact.html">Contact</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-md-4 sign-gd-two">
+						<h4>Thông Tin Shop</h4>
+						<ul>
+							<li>
+								<i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : 227, Nguyễn văn Cừ
+								<span>Thành Phố Hồ Chí Minh</span>
+							</li>
+							<li>
+								<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email :
+								<a href="mailto:thesheepshop@gmail.com">thesheepshop@gamil.com</a>
+							</li>
+							<li>
+								<i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : 0123456789</li>
+						</ul>
+					</div>
+					<div class="col-md-4 sign-gd flickr-post">
+						<h4>Hình ảnh</h4>
+						<ul>
+							<li>
+								<a href="single.html">
+									<img src="images/f1.jpg" alt=" " class="img-responsive" />
+								</a>
+							</li>
+							<li>
+								<a href="single.html">
+									<img src="images/f2.jpg" alt=" " class="img-responsive" />
+								</a>
+							</li>
+							<li>
+								<a href="single.html">
+									<img src="images/f3.jpg" alt=" " class="img-responsive" />
+								</a>
+							</li>
+							<li>
+								<a href="single.html">
+									<img src="images/f4.jpg" alt=" " class="img-responsive" />
+								</a>
+							</li>
+							<li>
+								<a href="single.html">
+									<img src="images/f5.jpg" alt=" " class="img-responsive" />
+								</a>
+							</li>
+							<li>
+								<a href="single.html">
+									<img src="images/f6.jpg" alt=" " class="img-responsive" />
+								</a>
+							</li>
+							<li>
+								<a href="single.html">
+									<img src="images/f7.jpg" alt=" " class="img-responsive" />
+								</a>
+							</li>
+							<li>
+								<a href="single.html">
+									<img src="images/f8.jpg" alt=" " class="img-responsive" />
+								</a>
+							</li>
+							<li>
+								<a href="single.html">
+									<img src="images/f9.jpg" alt=" " class="img-responsive" />
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<p class="copy-right">copy 2018 The Sheep Shop. All rights reserved | Design by
+				<a href="#">TheSHeep</a>
+			</p>
+		</div>
+	</div>
+	<!-- //footer -->
+	<!-- login -->
+	<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content modal-info">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body modal-spa">
+					<div class="login-grids">
+						<div class="login">
+							<div class="login-bottom">
+								<h3>Sign up for free</h3>
+								<form>
+									<div class="sign-up">
+										<h4>Email :</h4>
+										<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}"
+										    required="">
+									</div>
+									<div class="sign-up">
+										<h4>Password :</h4>
+										<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"
+										    required="">
+
+									</div>
+									<div class="sign-up">
+										<h4>Re-type Password :</h4>
+										<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"
+										    required="">
+
+									</div>
+									<div class="sign-up">
+										<input type="submit" value="REGISTER NOW">
+									</div>
+
+								</form>
+							</div>
+							<div class="login-right">
+								<h3>Sign in with your account</h3>
+								<form>
+									<div class="sign-in">
+										<h4>Email :</h4>
+										<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}"
+										    required="">
+									</div>
+									<div class="sign-in">
+										<h4>Password :</h4>
+										<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"
+										    required="">
+										<a href="#">Forgot password?</a>
+									</div>
+									<div class="single-bottom">
+										<input type="checkbox" id="brand" value="">
+										<label for="brand">
+											<span></span>Remember Me.</label>
+									</div>
+									<div class="sign-in">
+										<input type="submit" value="SIGNIN">
+									</div>
+								</form>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<p>By logging in you agree to our
+							<a href="#">Terms and Conditions</a> and
+							<a href="#">Privacy Policy</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //login -->
 </body>
+
 </html>
