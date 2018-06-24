@@ -1,9 +1,4 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
 <html>
 
@@ -12,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src='https://www.google.com/recaptcha/api.js?hl=vi'></script>
     <script type="application/x-javascript">
         addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
@@ -25,6 +21,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- pignose css -->
     <link href="/css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/bootstrap-datepicker/js/bootstrap-datepicker.min.js" rel="stylesheet" type="text/css" media="all" />
 
 
     <!-- //pignose css -->
@@ -39,7 +36,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script type="text/javascript" src="/js/bootstrap-3.1.1.min.js"></script>
     <!-- //for bootstrap working -->
     <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic'
+        rel='stylesheet' type='text/css'>
     <script src="/js/jquery.easing.min.js"></script>
 </head>
 
@@ -48,9 +46,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="header">
         <div class="container">
             <ul>
-                <li><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Vận chuyển nhanh chóng và an toàn</li>
-                <li><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Miễn phí vận chuyển</li>
-                <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:Thesheep@gmail.com">Thesheep@gmail.com</a></li>
+                <li>
+                    <span class="glyphicon glyphicon-time" aria-hidden="true"></span>Vận chuyển nhanh chóng và an toàn</li>
+                <li>
+                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Miễn phí vận chuyển</li>
+                <li>
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    <a href="mailto:Thesheep@gmail.com">Thesheep@gmail.com</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -60,7 +63,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <div class="col-md-3 header-left">
                 <h1>
-                    <a href="index.html"><img src="images/logo.png"></a>
+                    <a href="index.html">
+                        <img src="/images/logo.png">
+                    </a>
                 </h1>
             </div>
             <div class="col-md-6 header-middle">
@@ -70,12 +75,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="section_room">
                         <select id="country" onchange="change_country(this.value)" class="frm-field required">
-						<option value="null">All categories</option>
-						<option value="null">Men</option>     
-						<option value="AX">Women</option>
-						<option value="AX">Kid</option>
-						<option value="AX">Unisex</option>
-					</select>
+                            <option value="null">All categories</option>
+                            <option value="null">Men</option>
+                            <option value="AX">Women</option>
+                            <option value="AX">Kid</option>
+                            <option value="AX">Unisex</option>
+                        </select>
                     </div>
                     <div class="sear-sub">
                         <input type="submit" value=" ">
@@ -85,7 +90,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
             <div class="col-md-3 header-right footer-bottom">
                 <ul>
-                    <li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>Login</span></a>
+                    <li>
+                        <a href="#" class="use1" onclick="window.location.href='/account/login'">
+                            <span>Login</span>
+                        </a>
 
                     </li>
                     <li>
@@ -114,43 +122,78 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="container-fluid">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				  </button>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                                aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav menu__list">
-                                <li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Trang Chủ <span class="sr-only">(current)</span></a></li>
+                                <li class="active menu__item menu__item--current">
+                                    <a class="menu__link" href="index.html">Trang Chủ
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
                                 <li class="dropdown menu__item">
-                                    <a href="men.html" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MEN <span class="caret"></span></a>
+                                    <a href="men.html" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MEN
+                                        <span class="caret"></span>
+                                    </a>
                                     <ul class="dropdown-menu multi-column columns-3">
                                         <div class="row">
                                             <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                                <a href="mens.html"><img src="images/men.jpg" alt=" " /></a>
+                                                <a href="mens.html">
+                                                    <img src="images/men.jpg" alt=" " />
+                                                </a>
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-                                                    <li><a href="mens.html">Balo</a></li>
-                                                    <li><a href="mens.html">Cặp Sách Công Sở</a></li>
-                                                    <li><a href="mens.html">Túi đeo chéo</a></li>
-                                                    <li><a href="mens.html">Túi lapTop Đeo Vai</a></li>
-                                                    <li><a href="mens.html">Túi tote</a></li>
-                                                    <li><a href="mens.html">Ví</a></li>
+                                                    <li>
+                                                        <a href="mens.html">Balo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="mens.html">Cặp Sách Công Sở</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="mens.html">Túi đeo chéo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="mens.html">Túi lapTop Đeo Vai</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="mens.html">Túi tote</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="mens.html">Ví</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-                                                    <li><a href="mens.html">Laza</a></li>
-                                                    <li><a href="mens.html">Lata</a></li>
-                                                    <li><a href="mens.html">Hanama</a></li>
-                                                    <li><a href="mens.html">YUUMY</a></li>
-                                                    <li><a href="mens.html">HARAS</a></li>
-                                                    <li><a href="mens.html">PRAZA</a></li>
-                                                    <li><a href="mens.html">Zapas</a></li>
+                                                    <li>
+                                                        <a href="mens.html">Laza</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="mens.html">Lata</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="mens.html">Hanama</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="mens.html">YUUMY</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="mens.html">HARAS</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="mens.html">PRAZA</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="mens.html">Zapas</a>
+                                                    </li>
                                                 </ul>
                                             </div>
 
@@ -159,59 +202,111 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </ul>
                                 </li>
                                 <li class="dropdown menu__item">
-                                    <a href="womens.html" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">WOMEN <span class="caret"></span></a>
+                                    <a href="womens.html" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">WOMEN
+                                        <span class="caret"></span>
+                                    </a>
                                     <ul class="dropdown-menu multi-column columns-3">
                                         <div class="row">
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-                                                    <li><a href="womens.html">Túi đeo chéo</a></li>
-                                                    <li><a href="womens.html">Balo</a></li>
-                                                    <li><a href="womens.html">Ví</a></li>
-                                                    <li><a href="womens.html">Túi tote</a></li>
-                                                    <li><a href="womens.html">Ví cầm tay</a></li>
+                                                    <li>
+                                                        <a href="womens.html">Túi đeo chéo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="womens.html">Balo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="womens.html">Ví</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="womens.html">Túi tote</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="womens.html">Ví cầm tay</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-                                                    <li><a href="womens.html">XinhStore</a></li>
-                                                    <li><a href="womens.html">Lata</a></li>
-                                                    <li><a href="womens.html">Beshy</a></li>
-                                                    <li><a href="womens.html">Hanama</a></li>
-                                                    <li><a href="womens.html">Living</a></li>
-                                                    <li><a href="womens.html">Louis Vuiton</a></li>
-                                                    <li><a href="womens.html">PRADA</a></li>
+                                                    <li>
+                                                        <a href="womens.html">XinhStore</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="womens.html">Lata</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="womens.html">Beshy</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="womens.html">Hanama</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="womens.html">Living</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="womens.html">Louis Vuiton</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="womens.html">PRADA</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                                <a href="womens.html"><img src="images/women.jpg" alt=" " /></a>
+                                                <a href="womens.html">
+                                                    <img src="images/women.jpg" alt=" " />
+                                                </a>
                                             </div>
                                             <div class="clearfix"></div>
                                         </div>
                                     </ul>
                                 </li>
                                 <li class="dropdown menu__item">
-                                    <a href="kids.html" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">KID <span class="caret"></span></a>
+                                    <a href="kids.html" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">KID
+                                        <span class="caret"></span>
+                                    </a>
                                     <ul class="dropdown-menu multi-column columns-3">
                                         <div class="row">
                                             <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                                <a href="kids.html"><img src="images/kid.jpg" alt=" " /></a>
+                                                <a href="kids.html">
+                                                    <img src="images/kid.jpg" alt=" " />
+                                                </a>
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-                                                    <li><a href="kids.html">Balo</a></li>
-                                                    <li><a href="kids.html">Balo kéo</a></li>
-                                                    <li><a href="kids.html">Túi đeo vai</a></li>
+                                                    <li>
+                                                        <a href="kids.html">Balo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="kids.html">Balo kéo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="kids.html">Túi đeo vai</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-                                                    <li><a href="kids.html">Hami</a></li>
-                                                    <li><a href="kids.html">Hưng Việt</a></li>
-                                                    <li><a href="kids.html">BolehDeals</a></li>
-                                                    <li><a href="kids.html">Kabid</a></li>
-                                                    <li><a href="kids.html">Natuco</a></li>
-                                                    <li><a href="kids.html">Tomi</a></li>
-                                                    <li><a href="kids.html">VAKIND</a></li>
+                                                    <li>
+                                                        <a href="kids.html">Hami</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="kids.html">Hưng Việt</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="kids.html">BolehDeals</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="kids.html">Kabid</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="kids.html">Natuco</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="kids.html">Tomi</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="kids.html">VAKIND</a>
+                                                    </li>
                                                 </ul>
 
                                             </div>
@@ -220,30 +315,56 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </ul>
                                 </li>
                                 <li class="dropdown menu__item">
-                                    <a href="unisex.html" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UNISEX <span class="caret"></span></a>
+                                    <a href="unisex.html" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UNISEX
+                                        <span class="caret"></span>
+                                    </a>
                                     <ul class="dropdown-menu multi-column columns-3">
                                         <div class="row">
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-                                                    <li><a href="unisex.html">Túi đeo chéo</a></li>
-                                                    <li><a href="unisex.html">Balo</a></li>
-                                                    <li><a href="unisex.html">Ví</a></li>
-                                                    <li><a href="unisex.html">Túi tote</a></li>
-                                                    <li><a href="unisex.html">Túi đeo hông</a></li>
+                                                    <li>
+                                                        <a href="unisex.html">Túi đeo chéo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="unisex.html">Balo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="unisex.html">Ví</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="unisex.html">Túi tote</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="unisex.html">Túi đeo hông</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-                                                    <li><a href="unisex.html">Fila</a></li>
-                                                    <li><a href="unisex.html">Praza</a></li>
-                                                    <li><a href="unisex.html">LilyHood</a></li>
-                                                    <li><a href="unisex.html">HARAS</a></li>
-                                                    <li><a href="unisex.html">Zodiac</a></li>
-                                                    <li><a href="unisex.html">Leorno</a></li>
+                                                    <li>
+                                                        <a href="unisex.html">Fila</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="unisex.html">Praza</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="unisex.html">LilyHood</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="unisex.html">HARAS</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="unisex.html">Zodiac</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="unisex.html">Leorno</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                                <a href="unisex.html"><img src="images/unisex.jpg" alt=" " /></a>
+                                                <a href="unisex.html">
+                                                    <img src="images/unisex.jpg" alt=" " />
+                                                </a>
                                             </div>
                                             <div class="clearfix"></div>
                                         </div>
@@ -263,7 +384,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <h3>
                             <div class="total">
                                 <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
-                                <span class="simpleCart_total"></span> (<span> 0</span> items)</div>
+                                <span class="simpleCart_total"></span> (
+                                <span> 0</span> items)</div>
                         </h3>
                     </a>
 
@@ -279,9 +401,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="slide-visual">
                 <!-- Slide Image Area (1000 x 424) -->
                 <ul class="slide-group">
-                    <li><img class="img-responsive" src="images/slide1.jpg" alt="Dummy Image" /></li>
-                    <li><img class="img-responsive" src="images/slide2.jpg" alt="Dummy Image" /></li>
-                    <li><img class="img-responsive" src="images/slide3.jpeg" alt="Dummy Image" /></li>
+                    <li>
+                        <img class="img-responsive" src="/images/slide1.jpg" alt="Dummy Image" />
+                    </li>
+                    <li>
+                        <img class="img-responsive" src="/images/slide2.jpg" alt="Dummy Image" />
+                    </li>
+                    <li>
+                        <img class="img-responsive" src="/images/slide3.jpeg" alt="Dummy Image" />
+                    </li>
                 </ul>
 
                 <!-- Slide Description Image Area (316 x 328) -->
@@ -311,7 +439,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script type="text/javascript" src="/js/pignose.layerslider.js"></script>
         <script type="text/javascript">
             //<![CDATA[
-            $(window).load(function() {
+            $(window).load(function () {
                 $('#visual').pignoseLayerSlider({
                     play: '.btn-play',
                     pause: '.btn-pause',
@@ -325,9 +453,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div>
     <!-- //banner -->
     <div class="panel-body">
-		{{{body}}}
-	</div>
-   
+        {{{body}}}
+    </div>
+
 
     <div class="coupons">
         <div class="container">
@@ -359,9 +487,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <div class="col-md-3 footer-left">
                 <h2>
-                    <a href="index.html"><img src="images/logo.png" width="80%" alt=" " /></a>
+                    <a href="index.html">
+                        <img src="/images/logo.png" width="80%" alt=" " />
+                    </a>
                 </h2>
-                <p>The sheep shop sẽ mang đến cho bạn những giây phút mua sắm tuyệt vời nhất với các trải nghiệm tuyệt vời cùng cách làm việc chuyên nghiệp.</p>
+                <p>The sheep shop sẽ mang đến cho bạn những giây phút mua sắm tuyệt vời nhất với các trải nghiệm tuyệt vời cùng
+                    cách làm việc chuyên nghiệp.</p>
             </div>
             <div class="col-md-9 footer-right">
 
@@ -370,52 +501,89 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="col-md-4 sign-gd">
                         <h4>Thông Tin</h4>
                         <ul>
-                            <li><a href="index.html">Trang Chủ</a></li>
-                            <li><a href="mens.html">MEN</a></li>
-                            <li><a href="womens.html">WOMEN</a></li>
-                            <li><a href="kids.html">KID</a></li>
-                            <li><a href="unisex.html">UNISEX</a></li>
-                            <li><a href="contact.html">CONTACT</a></li>
+                            <li>
+                                <a href="index.html">Trang Chủ</a>
+                            </li>
+                            <li>
+                                <a href="mens.html">MEN</a>
+                            </li>
+                            <li>
+                                <a href="womens.html">WOMEN</a>
+                            </li>
+                            <li>
+                                <a href="kids.html">KID</a>
+                            </li>
+                            <li>
+                                <a href="unisex.html">UNISEX</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">CONTACT</a>
+                            </li>
                         </ul>
                     </div>
 
                     <div class="col-md-4 sign-gd-two">
                         <h4>Thông Tin Shop</h4>
                         <ul>
-                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : 227, Nguyễn văn Cừ <span>Thành Phố Hồ Chí Minh</span></li>
-                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a href="mailto:thesheepshop@gmail.com">thesheep@gmail.com</a></li>
-                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : 0123456789</li>
+                            <li>
+                                <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : 227, Nguyễn văn Cừ
+                                <span>Thành Phố Hồ Chí Minh</span>
+                            </li>
+                            <li>
+                                <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email :
+                                <a href="mailto:thesheepshop@gmail.com">thesheep@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : 0123456789</li>
                         </ul>
                     </div>
                     <div class="col-md-4 sign-gd flickr-post">
                         <h4>Hình ảnh</h4>
                         <ul>
                             <li>
-                                <a href="single.html"><img src="images/f1.jpg" alt=" " class="img-responsive" /></a>
+                                <a href="single.html">
+                                    <img src="/images/f1.jpg" alt=" " class="img-responsive" />
+                                </a>
                             </li>
                             <li>
-                                <a href="single.html"><img src="images/f2.jpg" alt=" " class="img-responsive" /></a>
+                                <a href="single.html">
+                                    <img src="/images/f2.jpg" alt=" " class="img-responsive" />
+                                </a>
                             </li>
                             <li>
-                                <a href="single.html"><img src="images/f3.jpg" alt=" " class="img-responsive" /></a>
+                                <a href="single.html">
+                                    <img src="/images/f3.jpg" alt=" " class="img-responsive" />
+                                </a>
                             </li>
                             <li>
-                                <a href="single.html"><img src="images/f4.jpg" alt=" " class="img-responsive" /></a>
+                                <a href="single.html">
+                                    <img src="/images/f4.jpg" alt=" " class="img-responsive" />
+                                </a>
                             </li>
                             <li>
-                                <a href="single.html"><img src="images/f5.jpg" alt=" " class="img-responsive" /></a>
+                                <a href="single.html">
+                                    <img src="/images/f5.jpg" alt=" " class="img-responsive" />
+                                </a>
                             </li>
                             <li>
-                                <a href="single.html"><img src="images/f6.jpg" alt=" " class="img-responsive" /></a>
+                                <a href="single.html">
+                                    <img src="/images/f6.jpg" alt=" " class="img-responsive" />
+                                </a>
                             </li>
                             <li>
-                                <a href="single.html"><img src="images/f7.jpg" alt=" " class="img-responsive" /></a>
+                                <a href="single.html">
+                                    <img src="/images/f7.jpg" alt=" " class="img-responsive" />
+                                </a>
                             </li>
                             <li>
-                                <a href="single.html"><img src="images/f8.jpg" alt=" " class="img-responsive" /></a>
+                                <a href="single.html">
+                                    <img src="/images/f8.jpg" alt=" " class="img-responsive" />
+                                </a>
                             </li>
                             <li>
-                                <a href="single.html"><img src="images/f9.jpg" alt=" " class="img-responsive" /></a>
+                                <a href="single.html">
+                                    <img src="/images/f9.jpg" alt=" " class="img-responsive" />
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -423,55 +591,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
             </div>
             <div class="clearfix"></div>
-            <p class="copy-right">&copy 2018 The Sheep Shop. All rights reserved | Design by <a href="#">TheSheep</a></p>
+            <p class="copy-right">&copy 2018 The Sheep Shop. All rights reserved | Design by
+                <a href="#">TheSheep</a>
+            </p>
         </div>
     </div>
-    <!-- //footer -->
-    <!-- login -->
-    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content modal-info">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-body modal-spa">
-                    <div class="login-grids">
-                        <div class="login">
-                            <img src="./images/logo.png">
-                            <div class="login-right">
-                                <h3>Sign in with your account</h3>
-                                <form>
-                                    <div class="sign-in">
-                                        <h4>Email :</h4>
-                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
-                                    </div>
-                                    <div class="sign-in">
-                                        <h4>Password :</h4>
-                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-                                        <a href="#">Forgot password?</a>
-                                    </div>
-                                    <div class="single-bottom">
-                                        <input type="checkbox" id="brand" value="">
-                                        <label for="brand"><span></span>Remember Me.</label>
-                                    </div>
-                                    <div class="sign-in">
-                                        <button type="button" class="btn btn-warning" onclick="window.location.href='index-dn.html'">SIGN IN</button>
-                                    </div>
-                                    <br>
-                                    <div class="sign-in">
-                                        <button type="button" class="btn btn-warning" onclick="window.location.href='createacount.html'">Create New Account</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //login -->
-            <!--//create-->
-
-        </div>
 </body>
 
 </html>
