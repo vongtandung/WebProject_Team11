@@ -1,5 +1,5 @@
 var express = require('express'),
-adminrepo = require('../repos/adminrepo');
+    adminrepo = require('../repos/adminrepo');
 config = require('../config/config');
 var router = express.Router();
 
@@ -93,44 +93,51 @@ router.post('/', (req, res) => {
             }
 
         } else {
-            if(req.body.flag==="3"){
-                var danggiao=1;dagiao=0;
-                if(req.body.billsts==="1")
-                {
-                    dagiao=1;
+            if (req.body.flag === "3") {
+                var danggiao = 1;
+                dagiao = 0;
+                if (req.body.billsts === "1") {
+                    dagiao = 1;
                 }
-                if(req.body.billsts==="2")
-                {
-                    dagiao=0;
-                    danggiao=0;
+                if (req.body.billsts === "2") {
+                    dagiao = 0;
+                    danggiao = 0;
                 }
-                
-                adminrepo.delistatus(danggiao,dagiao,req.body.billid).then(value=>{
+
+                adminrepo.delistatus(danggiao, dagiao, req.body.billid).then(value => {
                     var url = '/dashboard';
                     res.redirect(url);
 
-                }
-                );
+                });
+            } else {
+                var acategory = {
+                    id: req.body.id,
+                    name: req.body.name,
+                    type: req.body.type,
+                    fors: req.body.fors,
+                    producer: req.body.producer,
+                    ori: req.body.ori,
+                    price: req.body.price,
+                    view: 0,
+                    by: 0,
+                    detail: req.body.detail,
+                    image: req.body.image
+                };
+                adminrepo.findcategory(acategory.id).then(rows => {
+                    if (rows.length < 1) {
+                        
+                        adminrepo.add(acategory).then(value => {
+                            var url = '/dashboard';
+                            res.redirect(url);
+                        });
+                    }
+                    else{
+                        var url = '/dashboard';
+                            res.redirect(url);
+
+                    }
+                });
             }
-            else{
-            var acategory = {
-                id: req.body.id,
-                name: req.body.name,
-                type: req.body.type,
-                fors: req.body.fors,
-                producer: req.body.producer,
-                ori: req.body.ori,
-                price: req.body.price,
-                view: 0,
-                by: 0,
-                detail: req.body.detail,
-                image: req.body.image
-            };
-            adminrepo.add(acategory).then(value => {
-                var url = '/dashboard';
-                res.redirect(url);
-            });
-        }
         }
 
     }
@@ -138,16 +145,16 @@ router.post('/', (req, res) => {
 
 router.get('/billdetail/:Madh', (req, res) => {
     var Ma = req.params.Madh;
-   var p1= adminrepo.customerinfo(Ma);
-   var p2=adminrepo.productinfo(Ma);
-   var p3=adminrepo.sumbill(Ma);
-   var p4=adminrepo.countbill(Ma);
-   Promise.all([p1, p2,p3,p4]).then(([cus, pro,sum,count]) => {
+    var p1 = adminrepo.customerinfo(Ma);
+    var p2 = adminrepo.productinfo(Ma);
+    var p3 = adminrepo.sumbill(Ma);
+    var p4 = adminrepo.countbill(Ma);
+    Promise.all([p1, p2, p3, p4]).then(([cus, pro, sum, count]) => {
         if (pro.length > 0) {
             var vm = {
                 customer: cus,
-                product:pro,
-                sumb:sum,
+                product: pro,
+                sumb: sum,
                 countb: count
             };
             console.log(vm);

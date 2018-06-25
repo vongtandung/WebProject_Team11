@@ -11,15 +11,25 @@ router.post('/register', (req, res) => {
     var user = {
         email: req.body.email,
         password: sha256(req.body.password).toString(),
-        name: req.body.fname+req.body.lname,
+        name: req.body.fname + req.body.lname,
         phone: req.body.phone,
         dob: req.body.dob,
-        address:req.body.address,
-        gender:req.body.gender,
-        index:0
+        address: req.body.address,
+        gender: req.body.gender,
+        index: 0
     };
-    accountrepo.add(user).then(value => {
-        res.render('account/register');
+    accountrepo.findemail(user.email).then(rows => {
+        if (rows < 1) {
+            accountrepo.add(user).then(value => {
+                var url = '/dashboard';
+                res.redirect(url);
+            });
+        } else {
+            var vm = {
+                flag:1
+            };
+            res.render('account/register', vm);
+        }
     });
 });
 router.get('/login', (req, res) => {
@@ -32,19 +42,18 @@ router.post('/login', (req, res) => {
         username: req.body.email,
         password: a
     };
-    console.log("test");
-    
-    console.log(req.session.isLogged);
+
     accountrepo.login(user).then(rows => {
         if (rows.length > 0) {
-            req.session.isLogged=true;
-            var url = 'account/login';
+            // req.session.isLogged=true;
+            var url = '/dashboard';
             res.redirect(url);
+            
         } else {
             var vm = {
-                showError: true,
-                errorMsg: 'Login failed'
+                flag:1
             };
+
             res.render('account/login', vm);
         }
     });
