@@ -1,3 +1,4 @@
+
 <div class="product-easy">
     <div class="container">
 
@@ -58,6 +59,7 @@
                                         <tbody>
                                             {{#each categories}}
                                             <tr>
+                                                
                                                 <td>{{Masp}}</td>
                                                 <td>{{Ten}}</td>
                                                 <td>
@@ -86,10 +88,27 @@
                                 </div>
                                 <br>
                                 <br>
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="?page=1">&laquo;</a>
+                                    </li>
+                                    {{#each page_numbers}} {{#if isCurrentPage}}
+                                    <li class="active">
+                                        <a href="javascript:;">{{value}}</a>
+                                    </li>
+                                    {{else}}
+                                    <li>
+                                        <a href="?page={{value}}">{{value}}</a>
+                                    </li>
+                                    {{/if}} {{/each}}
+                                    <li>
+                                        <a href="?page={{numpage}}">&raquo;</a>
+                                    </li>
+                                </ul>
                                 <div style="margin-left:40%">
                                     <div class="col-md-2">
                                         <a href="#1" class="use1" data-toggle="modal" data-target="#add">
-                                            <button type="submit"  class="btn btn-large btn-block btn-danger">
+                                            <button type="submit" class="btn btn-large btn-block btn-danger">
                                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                             </button>
                                         </a>
@@ -146,8 +165,116 @@
                         </div>
                     </div>
                 </div>
+                <!--tab 3-->
+                <div class="resp-tabs-container">
+                    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+                        <div class="page-head">
+                            <div class="container">
+                                <h3>Quản Lý Nhà Sản Xuất</h3>
+                            </div>
+                        </div>
+                        <!-- //banner -->
+                        <br>
+                        <br>
+                        <div class="bill">
+                            <div class="container">
+                                <div class="table-responsive checkout-right animated wow slideInUp">
+                                    <table class="timetable_sub">
+                                        <thead>
+                                            <tr>
+                                                <th>Nhà Sản Phẩm</th>
+                                                <th>Tổng Sản Phẩm</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{#each totalproducer}}
+                                            <tr>
+                                                <td>{{Nhasx}}</td>
+                                                <td>{{Tong}}</td>
+                                            </tr>
+                                            {{/each}}
 
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--tab 4-->
+                <div class="resp-tabs-container">
+                    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-3">
+                        <div class="page-head">
+                            <div class="container">
+                                <h3>Quản Lý Đơn Hàng</h3>
+                            </div>
+                        </div>
+                        <!-- //banner -->
+                        <br>
+                        <br>
 
+                        <div class="bill">
+                            <div class="container">
+                                <div class="table-responsive checkout-right animated wow slideInUp">
+                                    <table class="timetable_sub">
+                                        <thead>
+                                            <tr>
+                                                <th>Mã Đơn Hàng</th>
+                                                <th>Tên Khách Hàng</th>
+                                                <th>Tổng Hóa Đơn</th>
+                                                <th>Ngày Lập</th>
+                                                <th>Tình Trạng</th>
+                                                <th>Chi Tiết</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{#each bill}} {{#if Dagiao}}
+                                            <tr>
+                                                {{else}} {{#if Danggiao}}
+                                                <tr style="background:paleturquoise">
+                                                    {{else}}
+                                                    <tr style="background:red">
+                                                        {{/if}} {{/if}}
+                                                        <td>{{Madh}}</td>
+                                                        <td>{{Tenkh}}</td>
+                                                        <td>{{Tonghd}}</td>
+                                                        <td>{{Ngaylap}}</td>
+                                                        {{#if Dagiao}}
+                                                        <td>Đã Giao</td>
+                                                        {{else}} {{#if Danggiao}}
+                                                        <td>Đang Giao</td>
+                                                        {{else}}
+                                                        <td>Chưa Giao</td>
+                                                        {{/if}} {{/if}}
+                                                        <td>
+                                                            <a href="dashboard/billdetail/{{Madh}}" class="btn btn-primary">
+                                                                <span class="glyphicon glyphicon-eye-open"></span>
+                                                            </a>
+                                                        </td>
+
+                                                    </tr>
+
+                                                    {{/each}}
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <br>
+                                <br>
+                                <div style="margin-left:40%">
+                                    <div class="col-md-2">
+                                        <a href="#1" class="use1" data-toggle="modal" data-target="#delivery">
+                                            <button type="submit" class="btn btn-large btn-block btn-danger">
+                                                <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -180,11 +307,17 @@
                                 </div>
                                 <div class="sign-in">
                                     <h4>Type</h4>
-                                    <select class="sign-in" name="type" required="">
-                                        {{#each type}}
-                                        <option>{{Loai}}</option>
-                                        {{/each}}
+                                    <input type="text" class="sign-in" name="type" required="">
+                                </div>
+                                <div class="sign-in">
+                                    <h4>For</h4>
+                                    <select class="sign-in" name="fors" required="">
+                                        <option>Men</option>
+                                        <option>Women</option>
+                                        <option>Kid</option>
+                                        <option>Unisex</option>
                                     </select>
+
                                 </div>
                                 <br>
                                 <div class="sign-in">
@@ -192,8 +325,12 @@
                                     <input type="text" name="producer" required="">
                                 </div>
                                 <div class="sign-in">
+                                    <h4>Origin</h4>
+                                    <input type="text" class="sign-in" name="ori" required="">
+                                </div>
+                                <div class="sign-in">
                                     <h4>Price</h4>
-                                    <input type="text" name="price" required="">
+                                    <input type="number" name="price" required="">
                                 </div>
                                 <div class="sign-in">
                                     <h4>Detail</h4>
@@ -207,7 +344,7 @@
                                 <br>
                                 <div class="sign-in">
                                     <button type="submit" class="btn btn-warning">ADD</button>
-                                    <button type="button" class="btn btn-warning" onclick="window.location.href='/'">Cancel</button>
+                                    <button type="button" class="btn btn-warning" onclick="window.location.href='/dashboard'">Cancel</button>
                                 </div>
                             </form>
                         </div>
@@ -238,7 +375,11 @@
                             <form action="" method="POST" class="form-horizontal" role="form">
                                 <div class="sign-in">
                                     <h4>Product ID</h4>
-                                    <input type="text" name="id" value='' required="">
+                                    <select class="sign-in" name="id" required="">
+                                        {{#each categories}}
+                                        <option>{{Masp}}</option>
+                                        {{/each}}
+                                    </select>
                                 </div>
                                 <div class="sign-in">
                                     <h4>Product Name</h4>
@@ -246,16 +387,26 @@
                                 </div>
                                 <div class="sign-in">
                                     <h4>Type</h4>
-                                    <select class="sign-in" name="type" value=''>
-                                        {{#each type}}
-                                        <option>{{Loai}}</option>
-                                        {{/each}}
+                                    <input type="text" class="sign-in" name="type">
+                                </div>
+                                <div class="sign-in">
+                                    <h4>For</h4>
+                                    <select class="sign-in" name="fors" required="">
+                                        <option>Men</option>
+                                        <option>Women</option>
+                                        <option>Kid</option>
+                                        <option>Unisex</option>
                                     </select>
+
                                 </div>
                                 <br>
                                 <div class="sign-in">
                                     <h4>Producer</h4>
                                     <input type="text" name="producer" value=''>
+                                </div>
+                                <div class="sign-in">
+                                    <h4>Origin</h4>
+                                    <input type="text" class="sign-in" name="ori">
                                 </div>
                                 <div class="sign-in">
                                     <h4>Price</h4>
@@ -277,9 +428,68 @@
                                             <input type="hidden" id="" name="CatID">
                                             <input type="hidden" id="" name="flag" value='2'>
                                         </div>
-                                        <button type="submit" class="btn btn-warning" >EDIT</button>
+                                        <button type="submit" class="btn btn-warning">EDIT</button>
                                     </form>
-                                    <button type="button" class="btn btn-warning" onclick="window.location.href='/'">Cancel</button>
+                                    <button type="button" class="btn btn-warning" onclick="window.location.href='/dashboard'">Cancel</button>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="delivery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content modal-info">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal-spa">
+                <div class="login-grids">
+                    <div class="login">
+                        <img src="./images/logo.png">
+                        <div class="login-right">
+                            <h3>UPDATE DELIVERY STATUS</h3>
+                            <br>
+                            <br>
+                            <form action="" method="POST" class="form-horizontal" role="form">
+                                <div class="sign-in">
+                                    <h4>Bill ID</h4>
+                                    <select class="sign-in" name="billid" required="">
+                                        {{#each bill}}
+                                        <option>{{Madh}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="sign-in">
+                                    <h4>Bill Status</h4>
+                                    <select class="sign-in" name="billsts" required="">
+                                        <option>Delivering</option>
+                                        <option value="1">Deliveried</option>
+                                        <option value="2">In store</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="sign-in">
+                                    <form action="" method="POST" role="form">
+                                        <div class="form-group">
+                                            <input type="hidden" id="" name="billID">
+                                            <input type="hidden" id="" name="flag" value='3'>
+                                        </div>
+                                        <button type="submit" class="btn btn-warning">Choose</button>
+                                    </form>
+                                    <button type="button" class="btn btn-warning" onclick="window.location.href='/dashboard'">Cancel</button>
                                 </div>
 
                             </form>

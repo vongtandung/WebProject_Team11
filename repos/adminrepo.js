@@ -28,6 +28,10 @@ exports.deletecategory=id=>{
 	var sql = `delete from sanpham where Masp = '${id}'`;
 	return db.save(sql);
 }
+exports.findcategory=id=>{
+	var sql = `select * from sanpham where Masp='${id}'`;
+	return db.load(sql);
+}
 exports.editcategoryimage = (image,id) => {
 	var sql = `update sanpham set Anh='${image}' where Masp = '${id}'`;
 	return db.save(sql);
@@ -80,7 +84,7 @@ exports.delistatus=(dang,da,id)=>{
 
 }
 exports.customerinfo=id=>{
-	var sql=`SELECT account.Name, account.Address, donhang.Danggiao, donhang.Dagiao, account.Phone, donhang.madh FROM donhang, account WHERE donhang.Madh ='${id}'and donhang.Tenkh=account.Name`;
+	var sql=`SELECT account.Name, account.Address, account.Phone, donhang.madh FROM donhang, account WHERE donhang.Madh ='${id}'and donhang.Tenkh=account.Name`;
 	return db.load(sql);
 }
 exports.productinfo=id=>{
