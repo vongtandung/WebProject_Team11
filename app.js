@@ -13,6 +13,7 @@ var bodyParser = require('body-parser');
 var handleLayoutMDW = require('./middle-wares/handleLayout');
 var admincontroller = require('./controllers/admincontroller');
 var accountcontroller = require('./controllers/accountcontroller');
+var profilecontroller = require('./controllers/profilecontroller');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/dashboard',admincontroller);
 app.use('/account',accountcontroller);
+app.use('/profile',profilecontroller);
 
 app.use(session({
   secret: 'keyboard cat',
