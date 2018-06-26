@@ -1,0 +1,148 @@
+<div>
+    <div class="page-head">
+        <div class="container">
+            <h3>Tạo tài khoản mới</h3>
+        </div>
+    </div>
+    <!-- //header-bot -->
+    <!-- container -->
+
+    <div class="product-easy">
+        <div class="container">
+            <form method="POST">
+                <div class="panel-body">
+                    <legend>Person Info</legend>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <label for="exampleInputName2">First Name</label>
+                        </div>
+                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                            <input type="text" class="form-control" name="fname" placeholder="Tần Dũng" required="">
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <label for="exampleInputName">Last Name</label>
+                        </div>
+                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                            <input type="text" class="form-control" name="lname" id="exampleInputName" required="" placeholder="Vòng">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <label for="GR">Gender</label>
+                        </div>
+                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                            <select name="gender" class="form-control">
+                                <option>Female</option>
+                                <option>Male</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <label>Date Of Birth</label>
+                        </div>
+                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                            <input type="text" class="form-control" name="dob" placeholder="dd/mm/yyyy" required="">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <label for="city">Address</label>
+                        </div>
+                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                            <input type="text" class="form-control" name="address" placeholder="227, nguyễn Văn Cừ, TP Hồ Chí Minh" required="">
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <label for="stt">Phone</label>
+                        </div>
+                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                            <input type="text" class="form-control" name="phone" placeholder="0123456789" required="">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <legend>Account Info</legend>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="col-xs-2">
+                            <label for="email">E-Mail</label>
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="text" class="form-control" name="email" placeholder="Vongtandung@gmail.com" required="">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="col-xs-2">
+                            <label for="pas">Password</label>
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="password" class="form-control" id="password"name="password" required="">
+                        </div>
+
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="col-xs-2">
+                            <label for="repass">Retype Password</label>
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="password" class="form-control" id="repassword" name="repassword" onchange="check()" required="" />
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="form-group">
+                          <div class="col-xs-2">
+                            <label for="recapt">ReCapcha</label>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="g-recaptcha" data-sitekey="6LcreWAUAAAAAKPjcNZILY51uXHJl-a6W7ufmuav"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <button type="submit" class="btn btn-warning">Create Account</button>
+                    </div>
+
+                </div>
+                <br>
+                <div class="clearfix"> </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    var check = function () {
+        var pass, repass = 0;
+        pass = document.getElementById('password').value;
+        repass = document.getElementById('repassword').value;
+        if (pass !== repass) {
+            alert("Nhập sai mật khẩu");
+            document.getElementById('password').value = '';
+            document.getElementById('repassword').value = '';
+        }
+    }
+</script>

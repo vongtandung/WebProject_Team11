@@ -1,0 +1,78 @@
+{{#section 'title'}}
+    Bill Detail
+{{/section}}
+<div class="page-head">
+    <div class="container">
+        <h3>Hóa Đơn Mua Hàng</h3>
+    </div>
+</div>
+<!-- //header-bot -->
+<!-- container -->
+{{#each customer}}
+<div class="checkout">
+    <div class="container">
+        <div class="col-md-12 customer-info" style="margin-bottom:20px">
+            <h4 class="col-md-7">Họ Và Tên Khách hàng: {{Name}} </h4>
+            <h4 class="col-md-4">Mã Hóa Đơn: {{madh}}</h4>
+        </div>
+        <br>
+        <div class="col-md-12 customer-info" style="margin-bottom:20px">
+            <h4 class="col-md-7">Địa Chỉ:  {{Address}} </h4>
+            <h4 class="col-md-4">Số Điện Thoại: {{Phone}}</h4>
+        </div>
+        {{/each}}
+
+        <!-- //banner -->
+        <div class="col-md-12 bill">
+            <div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
+                <table class="timetable_sub">
+                    <thead>
+                        <tr>
+                            <th>Mã Mặt Hàng</th>
+                            <th>Tên Mặt Hàng</th>
+                            <th>Số Lượng</th>
+                            <th>Đơn Giá</th>
+                            <th>Thành Tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                          {{#each product}}
+                          <tr>
+                              <td>{{Masp}}</td>
+                              <td>{{Ten}}</td>
+                              <td>{{Soluong}}</td>
+                              <td>{{Gia}}</td>
+                              <td>{{Tong}}</td>
+                              
+                          </tr>
+                          {{/each}}
+                    </tbody>
+                   
+                </table>
+            </div>
+            <br>
+            <div class="bill-left">
+                <div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
+                    <h4>Tổng</h4>
+                    <ul>
+                        <li>Số Lượng Mặt Hàng:
+                            {{#each countb}}
+                            <span>{{countbill}}</span>
+                            {{/each}}
+                        </li>
+                        <li>Tổng Hóa Đơn:
+                             {{#each sumb}}
+                            <span>{{sumbill}} VNĐ</span>
+                            {{/each}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <br>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-large btn-block btn-danger" onclick="window.location.href='/dashboard'">Back To Dashboard</button>
+        </div>
+    </div>
+</div>
