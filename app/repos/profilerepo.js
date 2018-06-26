@@ -5,12 +5,8 @@ exports.loadallcategories = () => {
 	return db.load(sql);
 }
 
-exports.deletecategory=email=>{
-	var sql = `delete from account where Email = '${email}'`;
-	return db.save(sql);
-}
-exports.add = user => {
-	var sql = `INSERT INTO account VALUES('${user.email}', '${user.password}', '${user.name}', '${user.phone}', '${user.dob}','${user.address}', '${user.gender}', ${user.index})`;
+exports.update = (password, name, phone, dob, address, gender) => {
+	var sql = `update account set Password='${password}', Name='${name}', Phone='${phone}', DOB='${dob}', Address='${address}', Gender='${gender}' where Masp = '${id}'`;
 	return db.save(sql);
 }
 exports.findemail=email=>{
