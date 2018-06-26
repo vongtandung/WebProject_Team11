@@ -1,5 +1,7 @@
 var express = require('express'),
     profilerepo = require('../repos/profilerepo');
+     sha256 = require('crypto-js/sha256'),
+    moment = require('moment'),
 
 var router = express.Router();
 
@@ -9,22 +11,17 @@ router.get('/profile', (req, res) => {
 
 router.post('/profile', (req, res) => {
     var user = {
-        email: req.body.email,
-        password: sha256(req.body.password).toString(),
-        name: req.body.fname + req.body.lname,
-        phone: req.body.phone,
-        dob: req.body.dob,
-        address: req.body.address,
-        gender: req.body.gender,
+        password: sha256(req.body.Password).toString(),
+        name: req.body.Fname + req.body.Lname,
+        phone: req.body.Phone,
+        dob: req.body.DOB,
+        address: req.body.Address,
+        gender: req.body.Gender,
         index: 0
     };
     profilerepo.findemail(user.email).then(rows => {
         if (rows = 1) {
-            profilerepo.delete(email).then(value =>{
-                var url = '/profile';
-                res.redirect(url);
-            });
-            profilerepo.add(user).then(value => {
+            profilerepo.update(user.password, user.name, user.phone, user.dob, user.address, user.gender).then(value =>{
                 var url = '/profile';
                 res.redirect(url);
             });
