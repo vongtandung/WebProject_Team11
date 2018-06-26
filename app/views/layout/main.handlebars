@@ -88,6 +88,24 @@
                     <div class="clearfix"></div>
                 </form>
             </div>
+            
+            {{#if layoutVM.isLogged}}
+             <div class="login button mr-3">
+                <div class="btn-group" style="float: right">
+                    <button type="button" class="btn btn-warning btn-lg dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img height="50dp" width="50dp" src="./images/admin-ct.png" />
+                              Tần Dũng <span class="caret"></span>
+                        </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="profile.html" target=_blank>Cập Nhật Thông Tin</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#changepass">Thay Đổi Mật Khẩu</a></li>
+                        <li><a href="history.html" target=_blank>Lịch Sử Mua Hàng</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="index.html">Đăng Xuất</a></li>
+                    </ul>
+                </div>
+            </div>
+            {{else}}
             <div class="col-md-3 header-right footer-bottom">
                 <ul>
                     <li>
@@ -110,6 +128,7 @@
                     </li>
                 </ul>
             </div>
+            {{/if}}
             <div class="clearfix"></div>
         </div>
     </div>

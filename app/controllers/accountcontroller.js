@@ -2,6 +2,7 @@ var express = require('express'),
     sha256 = require('crypto-js/sha256'),
     moment = require('moment'),
     accountrepo = require('../repos/accountrepo');
+    restrict = require('../middle-wares/restrict');
 
 var router = express.Router();
 router.get('/register', (req, res) => {
@@ -45,7 +46,9 @@ router.post('/login', (req, res) => {
 
     accountrepo.login(user).then(rows => {
         if (rows.length > 0) {
-            // req.session.isLogged=true;
+            console.log("login");
+           req.session.isLogged = true;
+           console.log("ms");
             var url = '/dashboard';
             res.redirect(url);
             
