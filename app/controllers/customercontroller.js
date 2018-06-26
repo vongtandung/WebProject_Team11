@@ -1,13 +1,13 @@
 var express = require('express'),
-    adminrepo = require('../repos/adminrepo');
+    customerrepo = require('../repos/customerrepo');
 
 var router = express.Router();
 
 router.get('/', (req, res) => {
-    var p1 = adminrepo.loadallcategories();
-    var p2 = adminrepo.loadalltype();
-    var p3 = adminrepo.loadallproducer();
-    var p4 = adminrepo.loadtotal();
+    var p1 = customerrepo.loadallcategories();
+    var p2 = customerrepo.loadalltype();
+    var p3 = customerrepo.loadallproducer();
+    var p4 = customerrepo.loadtotal();
 
     Promise.all([p1, p2, p3, p4]).then(([rows, row2, row3, row4]) => {
 
@@ -26,8 +26,8 @@ router.post('/', (req, res) => {
 
     if (req.body.flag === "1") {
         var id = req.body.CatID;
-        adminrepo.deletecategory(id).then(value => {
-            adminrepo.loadallcategories().then(rows => {
+        customerrepo.deletecategory(id).then(value => {
+            customerrepo.loadallcategories().then(rows => {
                 var vm = {
                     categories: rows
                 };
@@ -46,25 +46,25 @@ router.post('/', (req, res) => {
                 image: req.body.image
             };
             if (ecategory.name !== '') {
-                adminrepo.editcategoryname(ecategory.name, ecategory.id);
+                customerrepo.editcategoryname(ecategory.name, ecategory.id);
             }
             if (ecategory.producer !== '') {
-                adminrepo.editcategoryproducer(ecategory.producer, ecategory.id);
+                customerrepo.editcategoryproducer(ecategory.producer, ecategory.id);
             }
             if (ecategory.price !== '') {
-                adminrepo.editcategoryprice(ecategory.price, ecategory.id);
+                customerrepo.editcategoryprice(ecategory.price, ecategory.id);
             }
             if (ecategory.detail !== '') {
-                adminrepo.editcategorydetail(ecategory.detail, ecategory.id);
+                customerrepo.editcategorydetail(ecategory.detail, ecategory.id);
             }
             if (ecategory.image !== '') {
-                adminrepo.editcategoryimage(ecategory.image, ecategory.id);
+                customerrepo.editcategoryimage(ecategory.image, ecategory.id);
             }
             if (ecategory.type !== '') {
-                adminrepo.editcategorytype(ecategory.type, ecategory.id).then(value => {
-                    adminrepo.loadallcategories().then(rows => {
-                        var p1 = adminrepo.loadallcategories();
-                        var p2 = adminrepo.loadalltype();
+                customerrepo.editcategorytype(ecategory.type, ecategory.id).then(value => {
+                    customerrepo.loadallcategories().then(rows => {
+                        var p1 = customerrepo.loadallcategories();
+                        var p2 = customerrepo.loadalltype();
                     
                         Promise.all([p1, p2]).then(([rows, row2]) => {
                     
@@ -90,8 +90,8 @@ router.post('/', (req, res) => {
                 detail: req.body.detail,
                 image: req.body.image
             };
-            adminrepo.add(acategory).then(value => {
-                adminrepo.loadallcategories().then(rows => {
+            customerrepo.add(acategory).then(value => {
+                customerrepo.loadallcategories().then(rows => {
                     var vm = {
                         categories: rows
                     };
