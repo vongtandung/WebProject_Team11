@@ -3,101 +3,64 @@ var express = require('express'),
 
 var router = express.Router();
 
-router.get('/', (req, res) => {
-    var p1 = profilerepo.loadallcategories();
+router.get('/profile', (req, res) => {
+    res.render('account/profile');
+});
 
-    Promise.all([p1]).then(([rows]) => {
-
-        var vm = {
-            categories: rows
-        };
-        res.render('admin/dashboard', vm);
+router.post('/profile', (req, res) => {
+    var user = {
+        email: req.body.email,
+        password: sha256(req.body.password).toString(),
+        name: req.body.fname + req.body.lname,
+        phone: req.body.phone,
+        dob: req.body.dob,
+        address: req.body.address,
+        gender: req.body.gender,
+        index: 0
+    };
+    profilerepo.findemail(user.email).then(rows => {
+        if (rows = 1) {
+            profilerepo.delete(email).then(value =>{
+                var url = '/profile';
+                res.redirect(url);
+            });
+            profilerepo.add(user).then(value => {
+                var url = '/profile';
+                res.redirect(url);
+            });
+        } else {
+            var vm = {
+                flag:1
+            };
+            res.render('account/register', vm);
+        }
     });
 });
-
-router.post('/', (req, res) => {
-
-
-    if (req.body.flag === "1") {
-        var id = req.body.CatID;
-        profilerepo.deletecategory(id).then(value => {
-            profilerepo.loadallcategories().then(rows => {
-                var vm = {
-                    categories: rows
-                };
-                res.render('admin/dashboard', vm);
-            });
-        });;
-    } else {
-        if (req.body.flag === "2") {
-            var ecategory = {
-                id: req.body.id,
-                name: req.body.name,
-                email: req.body.email,
-                phone: req.body.phone,
-                dob: req.body.dob,
-                address: req.body.address,
-                gender: req.body.gender
-            };
-            if (ecategory.name !== '') {
-                profilerepo.editcategoryname(ecategory.name, ecategory.id);
-            }
-            if (ecategory.email !== '') {
-                profilerepo.editcategoryemail(ecategory.email, ecategory.id);
-            }
-            if (ecategory.phone !== '') {
-                profilerepo.editcategoryphone(ecategory.phone, ecategory.id);
-            }
-            if (ecategory.dob !== '') {
-                profilerepo.editcategorydob(ecategory.dob, ecategory.id);
-            }
-            if (ecategory.address !== '') {
-                profilerepo.editcategoryaddress(ecategory.address, ecategory.id);
-            }
-            if (ecategory.gender !== '') {
-                profilerepo.editcategorygender(ecategory.gender, ecategory.id).then(value => {
-                    profilerepo.loadallcategories().then(rows => {
-                        var p1 = profilerepo.loadallcategories();
-                        var p2 = profilerepo.loadalltype();
-                    
-                        Promise.all([p1]).then(([rows]) => {
-                    
-                            var vm = {
-                                categories: rows
-                            };
-                            res.render('admin/dashboard', vm);
-                        });
-                    });
-                });
-            }
-
-        } else {
-            var acategory = {
-                id: req.body.id,
-                name: req.body.name,
-                email: req.body.email,
-                phone: req.body.phone,
-                dob: req.body.dob,
-                address: req.body.address,
-                gender: req.body.gender,
-                view : 0,
-                by : 0
-            };
-            profilerepo.add(acategory).then(value => {
-                profilerepo.loadallcategories().then(rows => {
-                    var vm = {
-                        categories: rows
-                    };
-                    res.render('admin/dashboard', vm);
-                });
-            });
-        }
-
-    }
+router.get('/login', (req, res) => {
+    res.render('account/login');
 });
+router.post('/login', (req, res) => {
 
+    var a = sha256(req.body.password).toString();
+    var user = {
+        username: req.body.email,
+        password: a
+    };
 
+    accountrepo.login(user).then(rows => {
+        if (rows.length > 0) {
+            // req.session.isLogged=true;
+            var url = '/dashboard';
+            res.redirect(url);
+            
+        } else {
+            var vm = {
+                flag:1
+            };
 
-
+            res.render('account/login', vm);
+        }
+    });
+});
 
 module.exports = router;
