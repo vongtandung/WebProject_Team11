@@ -1,0 +1,104 @@
+{{#each catebyid}}
+<div class="single">
+    <div class="container">
+
+        <div class="col-md-6 single-right-left animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
+           
+            
+            <div class="col-md-10">
+                <a class="thumbnail">
+                    <img src="/images/{{Anh}}">
+                </a>
+            </div>
+            
+        </div>
+        <div class="col-md-6 single-right-left simpleCart_shelfItem animated wow slideInRight animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
+            <h3>{{Ten}}</h3>
+            <p>
+                <span class="item_price">{{Gia}} VNĐ</span>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                            </div>
+                            <div class="col-md-8">
+                                <h5>{{Xem}}</h5>
+                                <span>
+                                    <h5>Đã xem</h5>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                            </div>
+                            <div class="col-md-8">
+                                <h5>{{Mua}}</h5>
+                                <span>
+                                    <h5>Đã mua</h5>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <span>
+                    <p> </p>
+                </span>
+                <div class="occasion-cart">
+                    <a href="#" class="item_add hvr-outline-out button2">Thêm vào giỏ hàng</a>
+                </div>
+
+        </div>
+        <div class="clearfix"> </div>
+
+        <div class="bootstrap-tab animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
+            <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                <ul id="myTab" class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Thông tin sản phẩm</a>
+                    </li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active bootstrap-tab-text" id="home" aria-labelledby="home-tab">
+                        <h4>Mô tả sản phẩm</h4>
+                        <p>Xuất Xứ: &nbsp; {{Xuatsu}}</p>
+                        <p>Loại: &nbsp; {{Loai}}</p>
+                        <p>Nhà Sản Xuất: &nbsp; {{Nhasx}}</p>
+                        <p> {{Chitiet}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{{/each}}
+
+
+<div class="col-md-12">
+    <div class="col-md-2">
+        <p>5 Sản phẩm cùng loại</p>
+    </div>
+    {{#each typein}}
+    <div class="col-md-2">
+        <img src="/images/{{Anh}}" alt=" " class="img-responsive" width="100dp" height="200dp" />
+        <p>{{Ten}}</p>
+    </div>
+    {{/each}}
+</div>
+<div class="col-md-12">
+    <div class="col-md-2">
+        <p>5 Sản phẩm cùng NSX</p>
+    </div>
+    {{#each producer}}
+    <div class="col-md-2">
+        <img src="/images/{{Anh}}" alt=" " class="img-responsive" width="100dp" height="200dp" />
+        <p>{{Ten}}</p>
+    </div>
+    {{/each}}
+</div>

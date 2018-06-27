@@ -1,0 +1,115 @@
+<div class="page-head">
+    <div class="container">
+        <h3>Check Out</h3>
+    </div>
+</div>
+<!-- //banner -->
+<!-- check out -->
+<div class="checkout">
+    <div class="container">
+        <h3>My Shopping Bag</h3>
+        <div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
+            <table class="timetable_sub">
+                <thead>
+                    <tr>
+                        <th>Mặt hàng</th>
+                         <th>Tên mặt hàng</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                        <th>Xóa bỏ</th>
+                    </tr>
+                </thead>
+               
+                </tr>
+                <tr class="rem2">
+                    <td class="invert-image">
+                        <a href="single.html">
+                            <img src="images/c5.jpg" alt=" " class="img-responsive" />
+                        </a>
+                    </td>
+                   
+                    <td class="invert">Balo Hàn Quốc xanh</td>
+                    <td class="invert">500.000đ</td>
+                     <td class="invert">
+                        <div class="quantity">
+                            <div class="quantity-select">
+                                <div class="entry value-minus">&nbsp;</div>
+                                <div class="entry value">
+                                    <span>1</span>
+                                </div>
+                                <div class="entry value-plus active">&nbsp;</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="invert-closeb">
+                        <div class="rem">
+                            <div class="close2"> </div>
+                        </div>
+                        <script>
+                            $(document).ready(function (c) {
+                                $('.close2').on('click', function (c) {
+                                    $('.rem2').fadeOut('slow', function (c) {
+                                        $('.rem2').remove();
+                                    });
+                                });
+                            });
+                        </script>
+                    </td>
+                <script>
+                    $('.value-plus').on('click', function () {
+                        var divUpd = $(this).parent().find('.value'),
+                            newVal = parseInt(divUpd.text(), 10) + 1;
+                        divUpd.text(newVal);
+                    });
+
+                    $('.value-minus').on('click', function () {
+                        var divUpd = $(this).parent().find('.value'),
+                            newVal = parseInt(divUpd.text(), 10) - 1;
+                        if (newVal >= 1) divUpd.text(newVal);
+                    });
+                </script>
+                <!--quantity-->
+            </table>
+        </div>
+        <div class="checkout-left">
+
+            <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
+                <a href="mens.html">
+                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Quay lại</a>
+            </div>
+            <div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
+                <h4>Shopping basket</h4>
+                <ul>
+                    <li>Balo League of Legends
+                        <i>-</i>
+                        <span>139.000đ</span>
+                    </li>
+                    <li>Balo Hàn Quốc xanh
+                        <i>-</i>
+                        <span>500.000đ</span>
+                    </li>
+                    <li>Ví Mont Blanc đen
+                        <i>-</i>
+                        <span>150.000đ</span>
+                    </li>
+                    <li>Túi tote VNL
+                        <i>-</i>
+                        <span>100.000đ</span>
+                    </li>
+                    <li>Tổng cộng
+                        <i>-</i>
+                        <span>889.000đ</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('#cart').on('click',function(){
+           var id = $(this).data('proid');
+		$('#txtProId_R').val(id);
+        $('#frcart').submit();
+    });
+</script>

@@ -1,0 +1,108 @@
+ {{#with catetitle}}
+<div class="page-head">
+    <div class="container">
+        <h3>{{Gioi}}</h3>
+    </div>
+</div>
+{{/with}}
+<div class="men-wear">
+    <div class="container">
+        <div class="col-md-4 products-left">
+            <div class="css-treeview">
+                <h4>Categories</h4>
+                <ul class="tree-list-pad">
+                    <li>
+                        <input type="checkbox" checked="checked" id="item-0" />
+                        <ul>
+                                 {{#each protype}}
+                            <li>
+                                <input type="checkbox" />
+                                <label onclick="window.location.href='/{{Loai}}'" for="item-0-2">{{Loai}}</label>
+                            </li>
+                            {{/each}}
+
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item-1" checked="checked" />
+                        <label for="item-1">Nhà Sản Xuất</label>
+                        <ul>
+                            {{#each produ}}
+                            <li>
+                                <input type="checkbox" />
+                                <label onclick="window.location.href='/{{Nhasx}}'" for="item-0-2">{{Nhasx}}</label>
+                            </li>
+                            {{/each}}
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-8 products-right">
+            <h5>Product Compare</h5>
+            <div class="sort-grid">
+                <div class="sorting">
+                    <h6>Sort By</h6>
+                    <select id="sort" name="sort" class="frm-field required sect" onchange="window.location.href='/{{Gioi}}/'">
+                        <option value="0">Default</option>
+                        <option data-value="sort=price:desc">Giá Giảm Dần<a/></option>
+                        <option data-value="sor=price:asc">Giá Tăng Dần Dần</option>
+                        <option data-value="sort=view:desc">View Giảm Dần</option>
+                        <option data-value="sort=view:asc">View Tăng Dần</option>
+                        <option data-value="sort=buy:desc">Lượt Mua Giảm Dần</option>
+                        <option data-value="sort=buy:asc">Lượt Mua Tăng Dần</option>
+                    </select>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            {{#each catefor}}
+            <div class="col-md-4 product-men">
+                <div class="men-pro-item simpleCart_shelfItem">
+                    <div class="men-thumb-item"onclick="window.location.href='detail/{{Masp}}'">
+                        <img src="images/{{Anh}}" alt="" class="pro-image-front" width="100dp" height="250dp">
+                        <img src="images/{{Anh}}" alt="" class="pro-image-back" width="100dp" height="300dp">
+                        <div class="men-cart-pro">
+                        </div>
+                        <span class="product-new-top">New</span>
+                        <div class="item-info-product ">
+                            <h4>
+                                <a href="single.html">{{Ten}}</a>
+                            </h4>
+                            <div class="info-product-price">
+                                <span class="item_price">{{Gia}} VNĐ</span>
+                            </div>
+                            <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <ul class="pagination" style="float:right">
+            <li>
+                <a href="?page=1">&laquo;</a>
+            </li>
+            {{#each page_numbers}} {{#if isCurrentPage}}
+            <li class="active">
+                <a href="javascript:;">{{value}}</a>
+            </li>
+            {{else}}
+            <li>
+                <a href="?page={{value}}">{{value}}</a>
+            </li>
+            {{/if}} {{/each}}
+            <li>
+                <a href="?page={{numpage}}">&raquo;</a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $('#sort').delegate('span','click',function(){
+            var ele=$(this).closest('li');
+            var datavalue=ele.data('value')
+            window.location.href="/women/"+datavalue;
+
+        });
+    </script>
