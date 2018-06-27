@@ -14,6 +14,8 @@ var MySQLStore=require('express-mysql-session')(session);
 var handleLayoutMDW = require('./middle-wares/handleLayout');
 var admincontroller = require('./controllers/admincontroller');
 var accountcontroller = require('./controllers/accountcontroller');
+var homecontroller = require('./controllers/homecontroller');
+var cartcontroller = require('./controllers/cartcontroller');
 
 var app = express();
 
@@ -28,8 +30,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/dashboard',admincontroller);
-app.use('/account',accountcontroller);
+
 var sessionStore = new MySQLStore({
   host: 'localhost',
   port: 3306,
@@ -70,6 +71,10 @@ app.engine('hbs', exphbs({
   }
 }));
 app.use(handleLayoutMDW);
+app.use('/dashboard',admincontroller);
+app.use('/account',accountcontroller);
+app.use('/',homecontroller);
+app.use('/cart',cartcontroller);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
