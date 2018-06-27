@@ -43,23 +43,35 @@ router.post('/login', (req, res) => {
         username: req.body.email,
         password: a
     };
-
     accountrepo.login(user).then(rows => {
-        if (rows.length > 0) {
-            console.log("login");
-           req.session.isLogged = true;
-           console.log("ms");
-            var url = '/dashboard';
+        if (rows.length > 0) {  
+            req.session.user = rows[0];
+            req.session.isLogged = true;
+            req.session.cart = [];
+            if(rows[0].index===1)
+            {
+                req.session.isAdmin=true;
+            }
+            var url = '/';
             res.redirect(url);
             
         } else {
             var vm = {
                 flag:1
             };
-
             res.render('account/login', vm);
         }
     });
+});
+
+router.post('/logout', (req, res) => {
+    req.session.user = null;
+    req.session.isLogged = false;
+    req.session.cart = [];
+    req.session.isAdmin=false;
+    var url = '/';
+    res.redirect(url);
+
 });
 
 module.exports = router;
