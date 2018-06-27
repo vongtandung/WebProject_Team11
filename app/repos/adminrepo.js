@@ -13,11 +13,11 @@ exports.loadforproducer = () => {
 	return db.load(sql);
 }
 exports.loadalltype = () => {
-	var sql = 'select * from loaisp';
+	var sql = 'select DISTINCT(Loai) from sanpham';
 	return db.load(sql);
 }
 exports.loadallproducer = () => {
-	var sql = 'select * from nhasx';
+	var sql = 'select DISTINCT(Nhasx) from sanpham';
 	return db.load(sql);
 }
 exports.loadallbill = () => {
@@ -100,4 +100,9 @@ exports.countbill=id=>{
 	var sql=`SELECT SUM(Soluong) as countbill FROM ctdh WHERE ctdh.Madh ='${id}'`;
 	return db.load(sql);
 
+}
+
+exports.single = proId => {
+    var sql = `select * from sanpham where Masp = ${proId}`;
+    return db.load(sql);
 }
