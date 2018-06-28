@@ -1,6 +1,6 @@
 var express = require('express'),
     profilerepo = require('../repos/profilerepo');
-
+config = require('../config/config');
 var router = express.Router();
 
 router.get('/profile', (req, res) => {
