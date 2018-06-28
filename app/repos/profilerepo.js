@@ -5,8 +5,8 @@ exports.loadallcategories = () => {
 	return db.load(sql);
 }
 
-exports.update = (password, name, phone, dob, address, gender) => {
-	var sql = `update account set Password='${password}', Name='${name}', Phone='${phone}', DOB='${dob}', Address='${address}', Gender='${gender}' where Masp = '${id}'`;
+exports.update = (user) => {
+	var sql = `update account set Password='${user.password}', Name='${user.name}', Phone='${user.phone}', DOB='${user.dob}', Address='${user.address}', Gender='${user.gender}' where Email = '${email}'`;
 	return db.save(sql);
 }
 exports.findemail=email=>{
