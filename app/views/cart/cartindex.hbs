@@ -13,103 +13,86 @@
                 <thead>
                     <tr>
                         <th>Mặt hàng</th>
-                         <th>Tên mặt hàng</th>
+                        <th>Tên mặt hàng</th>
                         <th>Số lượng</th>
                         <th>Giá</th>
+                        <th>Thành Tiền</th>
                         <th>Xóa bỏ</th>
                     </tr>
                 </thead>
-               
+
                 </tr>
+                {{#each items}}
                 <tr class="rem2">
                     <td class="invert-image">
-                        <a href="single.html">
-                            <img src="images/c5.jpg" alt=" " class="img-responsive" />
+                        <a href="/detail/{{product.Masp}}">
+                            <img src="/images/{{product.Anh}}/0.jpg" alt=" " class="img-responsive" />
                         </a>
                     </td>
-                   
-                    <td class="invert">Balo Hàn Quốc xanh</td>
-                    <td class="invert">500.000đ</td>
-                     <td class="invert">
+
+                    <td class="invert">{{product.Ten}}</td>
+                    <td class="invert">
                         <div class="quantity">
                             <div class="quantity-select">
-                                <div class="entry value-minus">&nbsp;</div>
+                                
+                                <button type="button" class="btn btn-warning">-</button>
+                                
                                 <div class="entry value">
-                                    <span>1</span>
+                                    <span>{{Quantity}}</span>
                                 </div>
-                                <div class="entry value-plus active">&nbsp;</div>
+                                <form name="frmrm" method="post" action="/cart/add">
+                                <input type="hidden" name="proId" value="{{product.Masp}}">
+                                 <button type="submit" class="btn btn-warning">+</button>
+                                 </form>
                             </div>
                         </div>
                     </td>
+                    <td class="invert">{{product.Gia}}</td>
+                    <td class="invert">{{Amount}}</td>
                     <td class="invert-closeb">
-                        <div class="rem">
-                            <div class="close2"> </div>
-                        </div>
-                        <script>
-                            $(document).ready(function (c) {
-                                $('.close2').on('click', function (c) {
-                                    $('.rem2').fadeOut('slow', function (c) {
-                                        $('.rem2').remove();
-                                    });
-                                });
-                            });
-                        </script>
+                        <form name="frmrm" method="post" action="/cart/remove">
+                        <input value="{{product.Masp}}" name="ProID" type="hidden">
+                            <div class="rem">
+                                <button type="submit" class="col-md-1 btn btn-large btn-block btn-danger">
+                                    <div>
+                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                    </div>
+                                </button>
+                            </div>
+                        </form>
                     </td>
-                <script>
-                    $('.value-plus').on('click', function () {
-                        var divUpd = $(this).parent().find('.value'),
-                            newVal = parseInt(divUpd.text(), 10) + 1;
-                        divUpd.text(newVal);
-                    });
-
-                    $('.value-minus').on('click', function () {
-                        var divUpd = $(this).parent().find('.value'),
-                            newVal = parseInt(divUpd.text(), 10) - 1;
-                        if (newVal >= 1) divUpd.text(newVal);
-                    });
-                </script>
-                <!--quantity-->
+                    {{/each}}
             </table>
         </div>
+        <br>
+
         <div class="checkout-left">
 
-            <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
-                <a href="mens.html">
-                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Quay lại</a>
-            </div>
             <div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
                 <h4>Shopping basket</h4>
                 <ul>
-                    <li>Balo League of Legends
+                    {{#each items}}
+                    <li>{{product.Ten}} &nbsp;
                         <i>-</i>
-                        <span>139.000đ</span>
+                        <span>{{Amount}}</span>
                     </li>
-                    <li>Balo Hàn Quốc xanh
+                    {{/each}}
+                    <li>
+                        <b>Tổng: </b>&nbsp;
                         <i>-</i>
-                        <span>500.000đ</span>
-                    </li>
-                    <li>Ví Mont Blanc đen
-                        <i>-</i>
-                        <span>150.000đ</span>
-                    </li>
-                    <li>Túi tote VNL
-                        <i>-</i>
-                        <span>100.000đ</span>
-                    </li>
-                    <li>Tổng cộng
-                        <i>-</i>
-                        <span>889.000đ</span>
+                        <span>
+                            <b>{{sum}}</b>
+                        </span>
                     </li>
                 </ul>
             </div>
             <div class="clearfix"> </div>
+            <br>
+            <div style="float:right">
+                <button onclick="window.location.href='/cart/billpay'" type="button" class="btn btn-warning">
+                    <h4>Thanh Toán</h4>
+                </button>
+            </div>
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    $('#cart').on('click',function(){
-           var id = $(this).data('proid');
-		$('#txtProId_R').val(id);
-        $('#frcart').submit();
-    });
-</script>

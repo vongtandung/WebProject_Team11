@@ -1,7 +1,7 @@
  {{#with catetitle}}
 <div class="page-head">
     <div class="container">
-        <h3>{{Gioi}}</h3>
+        <h3>Sản Phẩm</h3>
     </div>
 </div>
 {{/with}}
@@ -14,10 +14,10 @@
                     <li>
                         <input type="checkbox" checked="checked" id="item-0" />
                         <ul>
-                                 {{#each protype}}
+                            {{#each protype}}
                             <li>
                                 <input type="checkbox" />
-                                <label onclick="window.location.href='/{{Loai}}'" for="item-0-2">{{Loai}}</label>
+                                <label onclick="window.location.href='/product/{{Loai}}'" for="item-0-2">{{Loai}}</label>
                             </li>
                             {{/each}}
 
@@ -30,7 +30,7 @@
                             {{#each produ}}
                             <li>
                                 <input type="checkbox" />
-                                <label onclick="window.location.href='/{{Nhasx}}'" for="item-0-2">{{Nhasx}}</label>
+                                <label onclick="window.location.href='/product/{{Nhasx}}'" for="item-0-2">{{Nhasx}}</label>
                             </li>
                             {{/each}}
 
@@ -46,7 +46,9 @@
                     <h6>Sort By</h6>
                     <select id="sort" name="sort" class="frm-field required sect" onchange="window.location.href='/{{Gioi}}/'">
                         <option value="0">Default</option>
-                        <option data-value="sort=price:desc">Giá Giảm Dần<a/></option>
+                        <option data-value="sort=price:desc">Giá Giảm Dần
+                            <a/>
+                        </option>
                         <option data-value="sor=price:asc">Giá Tăng Dần Dần</option>
                         <option data-value="sort=view:desc">View Giảm Dần</option>
                         <option data-value="sort=view:asc">View Tăng Dần</option>
@@ -60,21 +62,29 @@
             {{#each catefor}}
             <div class="col-md-4 product-men">
                 <div class="men-pro-item simpleCart_shelfItem">
-                    <div class="men-thumb-item"onclick="window.location.href='detail/{{Masp}}'">
-                        <img src="images/{{Anh}}" alt="" class="pro-image-front" width="100dp" height="250dp">
-                        <img src="images/{{Anh}}" alt="" class="pro-image-back" width="100dp" height="300dp">
-                        <div class="men-cart-pro">
-                        </div>
+                    <div class="men-thumb-item">
+                        <img src="/images/{{Anh}}/1.jpg" alt="" class="pro-image-front" width="100dp" height="200dp">
+                        <img src="/images/{{Anh}}/2.jpg" alt="" class="pro-image-back" width="100dp" height="200dp">
                         <span class="product-new-top">New</span>
-                        <div class="item-info-product ">
-                            <h4>
-                                <a href="single.html">{{Ten}}</a>
-                            </h4>
-                            <div class="info-product-price">
-                                <span class="item_price">{{Gia}} VNĐ</span>
-                            </div>
-                            <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                    </div>
+                    <div class="item-info-product ">
+                        <h4>
+                            <a href="/detail/{{Masp}}">{{Ten}}</a>
+                        </h4>
+                        <div class="info-product-price">
+                            <span class="item_price">{{Gia}} VNĐ</span>
                         </div>
+                        <form class="form-horizontal" id="frmAddItem" method="post" action="/cart/add">
+                            <div class="form-group">
+                                <div class="col-sm-4" style="margin-left:60px;">
+                                    <input name="proId" type="hidden" value="{{Masp}}">
+                                    <input id="txtQ" name="quantity" type="hidden" class="form-control" value="1">
+                                    <button class="btn btn-primary" type="submit">
+                                        <a class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -99,10 +109,10 @@
         </ul>
     </div>
     <script>
-        $('#sort').delegate('span','click',function(){
-            var ele=$(this).closest('li');
-            var datavalue=ele.data('value')
-            window.location.href="/women/"+datavalue;
+        $('#sort').delegate('span', 'click', function () {
+            var ele = $(this).closest('li');
+            var datavalue = ele.data('value')
+            window.location.href = "/women/" + datavalue;
 
         });
     </script>

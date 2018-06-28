@@ -1,0 +1,36 @@
+{{#section 'title'}}Search Result{{/section}} {{#if nopro}}
+<div style="font-weight:800;text-align:center;margin-top:50px;color:brown">
+    <h1>Không có sản phẩm thoả yêu cầu</h1>
+</div>
+{{else}}
+<div class="panel panel-primary">
+    <div class="panel-heading ">
+        <h3 class="panel-title" style="text-align: center;font-size:30px">KẾT QUẢ TÌM KIẾM</h3>
+    </div>
+     <div class="row">
+    {{#each products}}
+   
+    <div class="col-md-3 product-men" style="margin-top:20px">
+        <div class="men-pro-item simpleCart_shelfItem">
+            <div class="men-thumb-item">
+                <img src="images/{{Anh}}/1.jpg" alt="" class="pro-image-front" width="100dp" height="250dp">
+                <img src="images/{{Anh}}/2.jpg" alt="" class="pro-image-back" width="100dp" height="300dp">
+                <div class="men-cart-pro">
+                </div>
+                <span class="product-new-top">New</span>
+                <div class="item-info-product ">
+                    <h4>
+                        <a onclick="window.location.href='detail/{{Masp}}'">{{Ten}}</a>
+                    </h4>
+                    <div class="info-product-price">
+                        <span class="item_price">{{Gia}} VNĐ</span>
+                    </div>
+                    <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    </div>
+</div>
+{{/if}}

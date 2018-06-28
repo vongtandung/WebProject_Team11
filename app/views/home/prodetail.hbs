@@ -7,7 +7,7 @@
             
             <div class="col-md-10">
                 <a class="thumbnail">
-                    <img src="/images/{{Anh}}">
+                    <img src="/images/{{Anh}}/1.jpg">
                 </a>
             </div>
             
@@ -49,9 +49,17 @@
                 <span>
                     <p> </p>
                 </span>
-                <div class="occasion-cart">
-                    <a href="#" class="item_add hvr-outline-out button2">Thêm vào giỏ hàng</a>
-                </div>
+                   <form class="form-horizontal" id="frmAddItem" method="post" action="/cart/add">
+                            <div class="form-group">
+                                <div class="col-sm-10" style="margin-left:60px;">
+                                    <input name="proId" type="hidden" value="{{Masp}}">
+                                    <input id="txtQ" name="quantity" type="hidden" class="form-control" value="1">
+                                    <button class="col-md-4 btn" type="submit">
+                                       <a class="item_add hvr-outline-out button2">Thêm vào giỏ hàng</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
 
         </div>
         <div class="clearfix"> </div>
@@ -86,18 +94,20 @@
     </div>
     {{#each typein}}
     <div class="col-md-2">
-        <img src="/images/{{Anh}}" alt=" " class="img-responsive" width="100dp" height="200dp" />
+        <img src="/images/{{Anh}}/0.jpg" alt=" " class="img-responsive"  />
         <p>{{Ten}}</p>
     </div>
     {{/each}}
 </div>
+<br>
+<br>
 <div class="col-md-12">
     <div class="col-md-2">
         <p>5 Sản phẩm cùng NSX</p>
     </div>
     {{#each producer}}
     <div class="col-md-2">
-        <img src="/images/{{Anh}}" alt=" " class="img-responsive" width="100dp" height="200dp" />
+        <img src="/images/{{Anh}}/0.jpg" alt=" " class="img-responsive" />
         <p>{{Ten}}</p>
     </div>
     {{/each}}

@@ -42,3 +42,18 @@ exports.loadalltype = () => {
 	var sql = 'select DISTINCT(Loai) from sanpham';
 	return db.load(sql);
 }
+
+exports.searchpro = (name,cate) => {
+	var sql = "select * from sanpham where Gioi like'" + `${cate}` + "%' and Ten like '%" + `${name}` + "%' ";
+	return db.load(sql);
+}
+
+exports.searchproother = (cate) => {
+	var sql = `select * from sanpham where Gioi='${cate}' `
+	return db.load(sql);
+}
+
+exports.searchproallcate = (name) => {
+	var sql = "select * from sanpham where Ten like '%" + `${name}` + "%'";
+	return db.load(sql);
+}

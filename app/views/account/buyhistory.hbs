@@ -1,0 +1,55 @@
+<div class="page-head">
+    <div class="container">
+        <h3>Lịch Sử Mua Hàng</h3>
+    </div>
+</div>
+<!-- //header-bot -->
+<!-- container -->
+
+<div class="product-easy">
+    <div class="container">
+        {{#with custom}}
+        <div class="col-md-12 customer-info" style="margin-bottom:20px">
+            <h4 class="col-md-3">Họ Và Tên Khách hàng: </h4>
+            <a class="col-md-4">{{Name}}</a>
+        </div>
+        <br>
+        <div class="col-md-12 customer-info">
+            <h4 class="col-md-3">Địa Chỉ: </h4>
+            <a class="col-md-4"> {{Address}}</a>
+            <h4 class="col-md-2">Số Điện Thoại: </h4>
+            <a class="col-md-2">{{Phone}}</a>
+        </div>
+        {{/with}}
+        <!-- //banner -->
+        <div class="col-md-12 bill">
+            <div class="table-responsive checkout-right animated wow slideInUp">
+                <table class="timetable_sub">
+                    <thead>
+                        <tr>
+                            <th>Mã đơn hàng</th>
+                            <th>Số Lượng Mặt hàng</th>
+                            <th>Tổng Đơn Hàng</th>
+                            <th>Ngày Đặt</th>
+                            <th>Xem Chi tiết</th>
+                        </tr>
+                    </thead>
+                    {{#each bill}}
+                    <tr>
+
+                        <td>{{Madh}}</td>
+                        <td>{{Tongmh}}</td>
+                        <td>{{Tonghd}}</td>
+                        <td>{{Ngaylap}}</td>
+                        <td>
+                            <a href="/account/billdetail/{{Madh}}" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                            </a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

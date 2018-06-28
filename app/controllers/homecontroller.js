@@ -16,9 +16,8 @@ router.get('/', (req, res) => {
         res.render('home/index', vm);
     });
 });
-router.get(':fors', (req, res) => {
+router.get('/product/:fors', (req, res) => {
     var fors = req.params.fors;
-
     var p1 = homerepo.loadallproducer();
     var p3 = homerepo.countallcategoriesby(fors);
     var p4 = homerepo.loadalltype();

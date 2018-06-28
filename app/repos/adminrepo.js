@@ -65,7 +65,6 @@ exports.editcategoryorigin = (ori,id) => {
 	return db.save(sql);
 }
 
-
 exports.add = category => {
 	var sql = `insert into sanpham(Masp, Ten, Loai, Nhasx, Gia, Xem, Mua,Chitiet, Anh,Xuatsu,Gioi) values('${category.id}', '${category.name}', '${category.type}', '${category.producer}',  '${category.price}','${category.view}','${category.by}','${category.detail}','${category.image}','${category.ori}','${category.fors}')`;
 	return db.save(sql);
@@ -103,6 +102,6 @@ exports.countbill=id=>{
 }
 
 exports.single = proId => {
-    var sql = `select * from sanpham where Masp = ${proId}`;
+    var sql = `select * from sanpham where Masp = '${proId}'`;
     return db.load(sql);
 }

@@ -68,17 +68,17 @@
                 </h1>
             </div>
             <div class="col-md-6 header-middle">
-                <form>
+                <form method="get" action="/result" id="frmSearch" >
                     <div class="search">
-                        <input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
+                        <input type="search" name="nameS" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
                     </div>
                     <div class="section_room">
-                        <select id="country" onchange="change_country(this.value)" class="frm-field required">
-                            <option value="null">All categories</option>
-                            <option value="null">Men</option>
-                            <option value="AX">Women</option>
-                            <option value="AX">Kid</option>
-                            <option value="AX">Unisex</option>
+                        <select name="categS" id="country" onchange="change_country(this.value)" class="frm-field required">
+                            <option >All categories</option>
+                            <option >Men</option>
+                            <option >Women</option>
+                            <option >Kid</option>
+                            <option >Unisex</option>
                         </select>
                     </div>
                     <div class="sear-sub">
@@ -92,12 +92,12 @@
             <div class="login button mr-3">
                 <div class="btn-group" style="float: right">
                     <button type="button" class="btn btn-warning btn-lg dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img height="50dp" width="50dp" src="./images/admin-ct.png" /> {{layoutVM.curUser.Name}}
+                     Xin chào,&nbsp; {{layoutVM.curUser.Name}}
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/profile" target=_blank>Cập Nhật Thông Tin</a>
+                            <a href="/account/profileupdate" target=_blank>Cập Nhật Thông Tin</a>
                         </li>
                         {{#if layoutVM.isAdmin}}
                         <li>
@@ -105,7 +105,7 @@
                         </li>
                         {{else}}
                         <li>
-                            <a href="/history" target=_blank>Lịch Sử Mua Hàng</a>
+                            <a href="/account/history" target=_blank>Lịch Sử Mua Hàng</a>
                         </li>
                         {{/if}}
                         <li role="separator" class="divider"></li>
@@ -170,17 +170,17 @@
                                     </a>
                                 </li>
                                <li>
-                                    <a href="/men" class="dropdown-toggle menu__link" role="button" aria-haspopup="true" aria-expanded="false">MEN</a>
+                                    <a href="/product/men" class="dropdown-toggle menu__link" role="button" aria-haspopup="true" aria-expanded="false">MEN</a>
                                 </li>
                                 <li>
-                                    <a href="/women" class="dropdown-toggle menu__link" role="button" aria-haspopup="true" aria-expanded="false">WOMEN</a>
+                                    <a href="/product/women" class="dropdown-toggle menu__link" role="button" aria-haspopup="true" aria-expanded="false">WOMEN</a>
                                 </li>
                                 <li>
-                                    <a href="/unisex" class="dropdown-toggle menu__link" role="button" aria-haspopup="true" aria-expanded="false">UNISEX</a>
+                                    <a href="/product/unisex" class="dropdown-toggle menu__link" role="button" aria-haspopup="true" aria-expanded="false">UNISEX</a>
                                 </li>
                                           
                                 <li>
-                                    <a href="/kid" class="dropdown-toggle menu__link" role="button" aria-haspopup="true" aria-expanded="false">KID</a>
+                                    <a href="/product/kid" class="dropdown-toggle menu__link" role="button" aria-haspopup="true" aria-expanded="false">KID</a>
                                 </li>
                                 <li>
                                     <a href="/contact" class="dropdown-toggle menu__link" role="button" aria-haspopup="true" aria-expanded="false">Contact</a>
@@ -194,12 +194,12 @@
                     {{#if layoutVM.isLogged}}
 
                     <div class="cart box_1">
-                        <a href="checkout.html">
+                        <a href="/cart/mycart">
                             <h3>
                                 <div class="total">
                                     <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
-                                    <span class="simpleCart_total"></span> (
-                                    <span> 0</span> items)</div>
+                                    <span>My Cart</span>
+                                    </div>
                             </h3>
                         </a>
 
@@ -210,41 +210,6 @@
             </div>
         </div>
         <!-- //banner-top -->
-        <!-- banner -->
-        <div class="banner-grid">
-            <div id="visual">
-                <div class="slide-visual">
-                    <!-- Slide Image Area (1000 x 424) -->
-                    <ul class="slide-group">
-                        <li>
-                            <img class="img-responsive" src="/images/slide1.jpg" alt="Dummy Image" />
-                        </li>
-                        <li>
-                            <img class="img-responsive" src="/images/slide2.jpg" alt="Dummy Image" />
-                        </li>
-                        <li>
-                            <img class="img-responsive" src="/images/slide3.jpeg" alt="Dummy Image" />
-                        </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <script type="text/javascript" src="/js/pignose.layerslider.js"></script>
-            <script type="text/javascript">
-                //<![CDATA[
-                $(window).load(function () {
-                    $('#visual').pignoseLayerSlider({
-                        play: '.btn-play',
-                        pause: '.btn-pause',
-                        next: '.btn-next',
-                        prev: '.btn-prev'
-                    });
-                });
-            //]]>
-            </script>
-
-        </div>
         <!-- //banner -->
         <div class="panel-body">
             {{{body}}}
@@ -299,16 +264,16 @@
                                     <a href="/">Trang Chủ</a>
                                 </li>
                                 <li>
-                                    <a href="/men">MEN</a>
+                                    <a href="/product/men">MEN</a>
                                 </li>
                                 <li>
-                                    <a href="/women">WOMEN</a>
+                                    <a href="/product/women">WOMEN</a>
                                 </li>
                                 <li>
-                                    <a href="/kid">KID</a>
+                                    <a href="/product/kid">KID</a>
                                 </li>
                                 <li>
-                                    <a href="/unisex">UNISEX</a>
+                                    <a href="/product/unisex">UNISEX</a>
                                 </li>
                                 <li>
                                     <a href="/contact">CONTACT</a>

@@ -1,0 +1,70 @@
+<div class="page-head">
+    <div class="container">
+        <h3>Thanh Toán</h3>
+    </div>
+</div>
+<div class="product-easy">
+    <div class="container">
+        <div class="row">
+            <form action="#" method="post" class="form" role="form">
+
+                <div class="col-md-12" style="margin-top: 20px; margin-bottom:30px">
+                    <h4 class="col-md-3">Họ và tên: &nbsp;{{name}}</h4> 
+                </div>
+
+                <div class="col-md-12" style="margin-bottom:30px">
+                    <h4 class="col-md-3">Số điện thoại</h4>
+                    <a class="col-xs-4 col-md-9">
+                        <input class="form-control" name="sdt" required="" placeholder="Nhập số điện thoại của bạn" autofocus="" type="text">
+                    </a>
+                </div>
+                <div class="col-md-12" style="margin-bottom:30px">
+                    <h4 class="col-md-3">Địa Chỉ</h4>
+                    <a class="col-xs-4 col-md-9">
+                        <input class="form-control" name="add" required="" autofocus="" type="text">
+                    </a>
+                </div>
+                <br>
+                <div class="col-md-12 col-xs-12" style="float: left;">
+                    <table class="timetable_sub">
+                        <thead>
+                            <tr>
+                                <th>Mặt hàng</th>
+                                <th>Tên mặt hàng</th>
+                                <th>Số lượng</th>
+                                <th>Giá</th>
+                                <th>Thành Tiền</th>
+                            </tr>
+                        </thead>
+
+                        </tr>
+                        {{#each items}}
+                        <tr class="rem2">
+                            <td class="invert-image">
+                                <a href="/detail/{{product.Masp}}">
+                                    <img src="/images/{{product.Anh}}/0.jpg" alt=" " class="img-responsive" />
+                                </a>
+                            </td>
+                            <td class="invert">{{product.Ten}}</td>
+                            <td class="invert">
+                                <span>{{Quantity}}</span>
+                                <input type="hidden" name="quan" value="{{Quantity}}">
+                            </td>
+                            <td class="invert">{{product.Gia}}</td>
+                            <td class="invert">{{Amount}}</td>
+                            {{/each}}
+                    </table>
+                    <br>
+                    <div style="float:right">   <h3>Tổng: &nbsp; &nbsp; {{sum}}</h3></div>
+                    <input type="hidden" name="sum" value="{{sum}}">
+                    <br>
+                    <div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
+                    </div>
+                    <div class="col-md-2" style="float:right">
+                        <button type="submit" class="btn btn-warning"><h4>Thanh Tóan</h4></button>
+                    </div>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
