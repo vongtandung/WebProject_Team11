@@ -86,8 +86,12 @@ exports.customerinfo=id=>{
 	var sql=`SELECT account.Name, account.Address, account.Phone, donhang.madh FROM donhang, account WHERE donhang.Madh ='${id}'and donhang.Tenkh=account.Name`;
 	return db.load(sql);
 }
+exports.customerinfomation=id=>{
+	var sql=`SELECT * FROM donhang WHERE Madh ='${id}'`;
+	return db.load(sql);
+}
 exports.productinfo=id=>{
-	var sql=`SELECT sanpham.Masp, sanpham.Ten, ctdh.Soluong,sanpham.Gia, ctdh.Tong FROM ctdh, sanpham WHERE ctdh.Madh ='${id}'and ctdh.Masp=sanpham.Masp`;
+	var sql=`SELECT sanpham.Masp,sanpham.Anh, sanpham.Ten, ctdh.Soluong,sanpham.Gia, ctdh.Tong FROM ctdh, sanpham WHERE ctdh.Madh ='${id}'and ctdh.Masp=sanpham.Masp`;
 	return db.load(sql);
 	
 }

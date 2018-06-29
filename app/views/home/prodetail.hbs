@@ -1,16 +1,14 @@
-{{#each catebyid}}
+{{#with catebyid}}
 <div class="single">
     <div class="container">
 
         <div class="col-md-6 single-right-left animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
-           
-            
             <div class="col-md-10">
                 <a class="thumbnail">
                     <img src="/images/{{Anh}}/1.jpg">
                 </a>
             </div>
-            
+
         </div>
         <div class="col-md-6 single-right-left simpleCart_shelfItem animated wow slideInRight animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
             <h3>{{Ten}}</h3>
@@ -46,46 +44,66 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <span>
-                    <p> </p>
-                </span>
-                   <form class="form-horizontal" id="frmAddItem" method="post" action="/cart/add">
-                            <div class="form-group">
-                                <div class="col-sm-10" style="margin-left:60px;">
-                                    <input name="proId" type="hidden" value="{{Masp}}">
-                                    <input id="txtQ" name="quantity" type="hidden" class="form-control" value="1">
-                                    <button class="col-md-4 btn" type="submit">
-                                       <a class="item_add hvr-outline-out button2">Thêm vào giỏ hàng</a>
-                                    </button>
-                                </div>
+                <form class="form-horizontal" id="frmAddItem" method="post" action="/cart/add">
+                    <div class="form-group">
+                        <div class="col-sm-10" style="margin-left:60px;">
+                            <input name="proId" type="hidden" value="{{Masp}}">
+                            <input id="txtQ" name="quantity" type="hidden" class="form-control" value="1">
+                            <br>
+                            <button class="col-md-6 btn btn-lg btn-primary" type="submit">
+                                <a class="item_add hvr-outline-out button2">Thêm vào giỏ hàng</a>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-md-12 bootstrap-tab animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
+                    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                        <ul id="myTab" class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Thông tin sản phẩm</a>
+                            </li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active bootstrap-tab-text" id="home" aria-labelledby="home-tab">
+                                <h4>Mô tả sản phẩm</h4>
+                                <p>Xuất Xứ: &nbsp; {{Xuatsu}}</p>
+                                <p>Loại: &nbsp; {{Loai}}</p>
+                                <p>Nhà Sản Xuất: &nbsp; {{Nhasx}}</p>
+                                <p> {{Chitiet}}</p>
                             </div>
-                        </form>
+                        </div>
+                    </div>
+                </div>
 
         </div>
         <div class="clearfix"> </div>
+    </div>
+</div>
+{{/with}} {{#if layoutVM.isAdmin}}
+<div class="col-md-10">
+    <form class=" form-horizontal" id="frmAddItem" method="post" action="/cart/addcate">
+        <div class="col-md-4">
+            <h4>Nhập Hàng: </h4>
+        </div>
 
-        <div class="bootstrap-tab animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
-            <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-                <ul id="myTab" class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active">
-                        <a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Thông tin sản phẩm</a>
-                    </li>
-                </ul>
-                <div id="myTabContent" class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade in active bootstrap-tab-text" id="home" aria-labelledby="home-tab">
-                        <h4>Mô tả sản phẩm</h4>
-                        <p>Xuất Xứ: &nbsp; {{Xuatsu}}</p>
-                        <p>Loại: &nbsp; {{Loai}}</p>
-                        <p>Nhà Sản Xuất: &nbsp; {{Nhasx}}</p>
-                        <p> {{Chitiet}}</p>
-                    </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+
+                <div class="input-group" style="margin-left: 24px;">
+                    <input name="proId" type="hidden" value="{{catebyid.Masp}}">
+                    <input id="txtQ" name="quantity" type="text" class="form-control" placeholder="Slg" value="1">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </span>
                 </div>
             </div>
         </div>
-    </div>
-
+    </form>
 </div>
-{{/each}}
+{{/if}}
+
 
 
 <div class="col-md-12">
@@ -93,8 +111,8 @@
         <p>5 Sản phẩm cùng loại</p>
     </div>
     {{#each typein}}
-    <div class="col-md-2">
-        <img src="/images/{{Anh}}/0.jpg" alt=" " class="img-responsive"  />
+    <div class="col-md-2" onclick="window.location.href='/detail/{{Masp}}'">
+        <img src="/images/{{Anh}}/0.jpg" alt=" " class="img-responsive" />
         <p>{{Ten}}</p>
     </div>
     {{/each}}
@@ -106,7 +124,7 @@
         <p>5 Sản phẩm cùng NSX</p>
     </div>
     {{#each producer}}
-    <div class="col-md-2">
+    <div class="col-md-2" onclick="window.location.href='/detail/{{Masp}}'">
         <img src="/images/{{Anh}}/0.jpg" alt=" " class="img-responsive" />
         <p>{{Ten}}</p>
     </div>

@@ -1,3 +1,4 @@
+{{#if layoutVM.isLogged}}
 <div class="page-head">
     <div class="container">
         <h3>Lịch Sử Mua Hàng</h3>
@@ -28,24 +29,26 @@
                     <thead>
                         <tr>
                             <th>Mã đơn hàng</th>
-                            <th>Số Lượng Mặt hàng</th>
+                            <th>Địa Chỉ Giao</th>
                             <th>Tổng Đơn Hàng</th>
                             <th>Ngày Đặt</th>
-                            <th>Xem Chi tiết</th>
+                            <th>Tình Trạng</th>
                         </tr>
                     </thead>
                     {{#each bill}}
-                    <tr>
+                    <tr onclick="window.location.href='/account/billdetail/{{Madh}}'">
 
                         <td>{{Madh}}</td>
-                        <td>{{Tongmh}}</td>
+                        <td>{{Diachi}}</td>
                         <td>{{Tonghd}}</td>
                         <td>{{Ngaylap}}</td>
-                        <td>
-                            <a href="/account/billdetail/{{Madh}}" class="btn btn-primary">
-                                <span class="glyphicon glyphicon-eye-open"></span>
-                            </a>
-                        </td>
+                        {{#if Dagiao}}
+                        <td>Đã Giao</td>
+                        {{else}} {{#if Danggiao}}
+                        <td>Đang Giao</td>
+                        {{else}}
+                        <td>Chưa Giao</td>
+                        {{/if}} {{/if}}
                     </tr>
                     {{/each}}
                 </table>
@@ -53,3 +56,4 @@
         </div>
     </div>
 </div>
+{{/if}}

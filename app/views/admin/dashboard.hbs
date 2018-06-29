@@ -1,4 +1,4 @@
-
+{{#if layoutVM.isAdmin}}
 <div class="product-easy">
     <div class="container">
 
@@ -53,12 +53,15 @@
                                                 <th>Loại</th>
                                                 <th>Nhà Sản Xuất</th>
                                                 <th>Giá</th>
+                                                 <th>Lượt Xem</th>
+                                                <th>Lượt Mua</th>
+                                                <th>Số Lượng </th>
                                                 <th>Thao Tác</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             {{#each categories}}
-                                            <tr>
+                                            <tr onclick="window.location.href='/detail/{{Masp}}'">
                                                 
                                                 <td>{{Masp}}</td>
                                                 <td>{{Ten}}</td>
@@ -68,6 +71,9 @@
                                                 <td>{{Loai}}</td>
                                                 <td>{{Nhasx}}</td>
                                                 <td>{{Gia}}</td>
+                                                <td>{{Xem}}</td>
+                                                <td>{{Mua}}</td>
+                                                <td>{{Soluongton}}</td>
                                                 <td>
                                                     <div class="btn-group" role="group">
                                                         <form action="" method="POST" role="form">
@@ -152,7 +158,7 @@
                                         </thead>
                                         <tbody>
                                             {{#each total}}
-                                            <tr>
+                                            <tr onclick="window.location.href='/product/{{Loai}}'">
                                                 <td>{{Loai}}</td>
                                                 <td>{{Tong}}</td>
                                             </tr>
@@ -188,7 +194,7 @@
                                         </thead>
                                         <tbody>
                                             {{#each totalproducer}}
-                                            <tr>
+                                            <tr  onclick="window.location.href='/product/{{Nhasx}}'">
                                                 <td>{{Nhasx}}</td>
                                                 <td>{{Tong}}</td>
                                             </tr>
@@ -224,16 +230,15 @@
                                                 <th>Tổng Hóa Đơn</th>
                                                 <th>Ngày Lập</th>
                                                 <th>Tình Trạng</th>
-                                                <th>Chi Tiết</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             {{#each bill}} {{#if Dagiao}}
-                                            <tr>
+                                            <tr onclick="window.location.href='dashboard/billdetail/{{Madh}}'">
                                                 {{else}} {{#if Danggiao}}
-                                                <tr style="background:paleturquoise">
+                                                <tr style="background:paleturquoise"  onclick="window.location.href='dashboard/billdetail/{{Madh}}'">
                                                     {{else}}
-                                                    <tr style="background:red">
+                                                    <tr style="background:red"  onclick="window.location.href='dashboard/billdetail/{{Madh}}'">
                                                         {{/if}} {{/if}}
                                                         <td>{{Madh}}</td>
                                                         <td>{{Tenkh}}</td>
@@ -246,11 +251,6 @@
                                                         {{else}}
                                                         <td>Chưa Giao</td>
                                                         {{/if}} {{/if}}
-                                                        <td>
-                                                            <a href="dashboard/billdetail/{{Madh}}" class="btn btn-primary">
-                                                                <span class="glyphicon glyphicon-eye-open"></span>
-                                                            </a>
-                                                        </td>
 
                                                     </tr>
 
@@ -337,8 +337,8 @@
                                     <input type="text" name="detail" required="">
                                 </div>
                                 <div class="sign-in">
-                                    <h4>Hình Ảnh</h4>
-                                    <input type="file" name="image" required="">
+                                   
+                                    <input type="hidden" value="1" name="image">
                                 </div>
                                 <br>
                                 <br>
@@ -357,6 +357,9 @@
         </div>
     </div>
 </div>
+{{else}}
+LINK EROR 404!!
+{{/if}}
 
 <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-sm" role="document">

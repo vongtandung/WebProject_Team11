@@ -4,7 +4,6 @@ config = require('../config/config');
 var router = express.Router();
 
 router.get('/', (req, res) => {
-
     var p2 = adminrepo.loadalltype();
     var p3 = adminrepo.loadallproducer();
     var p6 = adminrepo.loadallbill();
@@ -145,7 +144,7 @@ router.post('/', (req, res) => {
 
 router.get('/billdetail/:Madh', (req, res) => {
     var Ma = req.params.Madh;
-    var p1 = adminrepo.customerinfo(Ma);
+    var p1 = adminrepo.customerinfomation(Ma);
     var p2 = adminrepo.productinfo(Ma);
     var p3 = adminrepo.sumbill(Ma);
     var p4 = adminrepo.countbill(Ma);

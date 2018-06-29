@@ -7,30 +7,38 @@
     <div class="panel-heading ">
         <h3 class="panel-title" style="text-align: center;font-size:30px">KẾT QUẢ TÌM KIẾM</h3>
     </div>
-     <div class="row">
+</div>
+<div class="row">
     {{#each products}}
-   
-    <div class="col-md-3 product-men" style="margin-top:20px">
+    <div class="col-md-3 product-men">
         <div class="men-pro-item simpleCart_shelfItem">
             <div class="men-thumb-item">
-                <img src="images/{{Anh}}/1.jpg" alt="" class="pro-image-front" width="100dp" height="250dp">
-                <img src="images/{{Anh}}/2.jpg" alt="" class="pro-image-back" width="100dp" height="300dp">
-                <div class="men-cart-pro">
+                <img src="images/{{Anh}}/1.jpg" alt="" class="pro-image-front" width="100dp" height="200dp">
+                <img src="images/{{Anh}}/2.jpg" alt="" class="pro-image-back" width="100dp" height="200dp">
+            </div>
+            <div class="item-info-product ">
+                <h4>
+                    <a href="detail/{{Masp}}">{{Ten}}</a>
+                </h4>
+                <div class="info-product-price">
+                    <span class="item_price">{{Gia}} VNĐ</span>
                 </div>
-                <span class="product-new-top">New</span>
-                <div class="item-info-product ">
-                    <h4>
-                        <a onclick="window.location.href='detail/{{Masp}}'">{{Ten}}</a>
-                    </h4>
-                    <div class="info-product-price">
-                        <span class="item_price">{{Gia}} VNĐ</span>
+                <form class="form-horizontal" id="frmAddItem" method="post" action="/cart/add">
+                    <div class="form-group">
+                        <div class="col-sm-4" style="margin-left:60px;">
+                            <input name="proId" type="hidden" value="{{Masp}}">
+                            <input id="txtQ" name="quantity" type="hidden" class="form-control" value="1">
+                            <button class="btn btn-primary" type="submit">
+                                <a class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                            </button>
+                        </div>
                     </div>
-                    <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-                </div>
+                </form>
             </div>
         </div>
     </div>
+
+
     {{/each}}
-    </div>
 </div>
 {{/if}}

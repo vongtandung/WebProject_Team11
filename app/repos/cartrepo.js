@@ -9,18 +9,33 @@ exports.addbilldetail = ct => {
 }
 exports.getbillid=email=>{
     var sql=`SELECT donhang.Madh as ID FROM donhang where Email='${email}' ORDER BY Ngaylap DESC LIMIT 1`;
-    return db.save(sql);
+    return db.load(sql);
 
+}
+exports.getquantity=(id)=>{
+    var sql=`select sanpham.Soluongton as slt  from sanpham where Masp='${id}' `;
+    return db.load(sql);
+}
+exports.addcate=(id,quan)=>{
+    var sql=`update sanpham set sanpham.Soluongton= ${quan} where Masp='${id}' `;
+    return db.save(sql);
 }
 exports.add = (cart, item) => {
     for (i = cart.length - 1; i >= 0; i--) {
         if (cart[i].Masp === item.Masp) {
             cart[i].Quantity += item.Quantity;
             return;
-        }
-        
+        }   
     }
     cart.push(item);
+}
+exports.updateby=(id,by)=>{
+	var sql=`update sanpham set sanpham.Mua=sanpham.Mua+ ${by} where Masp='${id}' `;
+    return db.save(sql);
+}
+exports.updateslt=(id,by)=>{
+	var sql=`update sanpham set sanpham.Soluongton=sanpham.Soluongton- ${by} where Masp='${id}' `;
+    return db.save(sql);
 }
 
 exports.remove = (cart, Masp) => {
@@ -30,4 +45,10 @@ exports.remove = (cart, Masp) => {
             return;
         }
     }
+}
+exports.removeall = (cart) => {
+    for (var i = cart.length - 1; i >= 0; i--) {
+            cart.splice(i, 1);
+    }
+    return;
 }

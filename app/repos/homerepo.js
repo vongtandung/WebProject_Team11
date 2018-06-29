@@ -26,10 +26,16 @@ exports.loadcategoryview=()=>{
 	return db.load(sql);
 }
 exports.loadallcategoriesby=(foro,offset)=>{
-    var sql=`SELECT * FROM sanpham where Gioi='${foro}' or Loai='${foro}'or Nhasx='${foro}' limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
+    var sql=`SELECT * FROM sanpham where Gioi='${foro}' or Loai='${foro}'or Nhasx='${foro}'  limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
    
 	return db.load(sql);
 }
+exports.loadallcategoriesbysort1=(foro,offset,sort1,sort2)=>{
+    var sql=`SELECT * FROM sanpham where (Gioi='${foro}' or Loai='${foro}'or Nhasx='${foro}') and Gia >${sort1} and Gia<${sort2}  limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
+   
+	return db.load(sql);
+}
+
 exports.countallcategoriesby=(foro)=>{
     var sql=`SELECT count(*) as countw FROM sanpham where Gioi='${foro}' or Loai='${foro}' or Nhasx='${foro}'`;
 	return db.load(sql);
@@ -44,16 +50,20 @@ exports.loadalltype = () => {
 }
 
 exports.searchpro = (name,cate) => {
-	var sql = "select * from sanpham where Gioi like'" + `${cate}` + "%' and Ten like '%" + `${name}` + "%' ";
+	var sql = "select * from sanpham where Loai like'" + `${cate}` + "%' and Ten like '%" + `${name}` + "%' ";
 	return db.load(sql);
 }
 
 exports.searchproother = (cate) => {
-	var sql = `select * from sanpham where Gioi='${cate}' `
+	var sql = `select * from sanpham where Loai='${cate}' `
 	return db.load(sql);
 }
 
 exports.searchproallcate = (name) => {
 	var sql = "select * from sanpham where Ten like '%" + `${name}` + "%'";
 	return db.load(sql);
+}
+exports.updateview=(id)=>{
+	var sql=`update sanpham set sanpham.Xem=sanpham.Xem+1 where Masp='${id}' `;
+    return db.save(sql);
 }

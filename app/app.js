@@ -16,6 +16,7 @@ var admincontroller = require('./controllers/admincontroller');
 var accountcontroller = require('./controllers/accountcontroller');
 var homecontroller = require('./controllers/homecontroller');
 var cartcontroller = require('./controllers/cartcontroller');
+var searchcontroller = require('./controllers/searchcontroller');
 
 var app = express();
 
@@ -75,6 +76,7 @@ app.use('/dashboard',admincontroller);
 app.use('/account',accountcontroller);
 app.use('/',homecontroller);
 app.use('/cart',cartcontroller);
+app.use('/result',searchcontroller);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

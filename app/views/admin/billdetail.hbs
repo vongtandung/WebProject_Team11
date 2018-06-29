@@ -1,3 +1,4 @@
+{{#if layoutVM.isAdmin}}
 {{#section 'title'}}
     Bill Detail
 {{/section}}
@@ -12,13 +13,13 @@
 <div class="checkout">
     <div class="container">
         <div class="col-md-12 customer-info" style="margin-bottom:20px">
-            <h4 class="col-md-7">Họ Và Tên Khách hàng: {{Name}} </h4>
-            <h4 class="col-md-4">Mã Hóa Đơn: {{madh}}</h4>
+            <h4 class="col-md-7">Họ Và Tên Khách hàng: {{Tenkh}} </h4>
+            <h4 class="col-md-4">Mã Hóa Đơn: {{Madh}}</h4>
         </div>
         <br>
         <div class="col-md-12 customer-info" style="margin-bottom:20px">
-            <h4 class="col-md-7">Địa Chỉ:  {{Address}} </h4>
-            <h4 class="col-md-4">Số Điện Thoại: {{Phone}}</h4>
+            <h4 class="col-md-7">Địa Chỉ:  {{Diachi}} </h4>
+            <h4 class="col-md-4">Số Điện Thoại: {{Sodt}}</h4>
         </div>
         {{/each}}
 
@@ -30,6 +31,7 @@
                         <tr>
                             <th>Mã Mặt Hàng</th>
                             <th>Tên Mặt Hàng</th>
+                            <th>Hình Ảnh</th>
                             <th>Số Lượng</th>
                             <th>Đơn Giá</th>
                             <th>Thành Tiền</th>
@@ -37,9 +39,10 @@
                     </thead>
                     <tbody>
                           {{#each product}}
-                          <tr>
+                          <tr onclick="window.location.href='/detail/{{Masp}}'">
                               <td>{{Masp}}</td>
                               <td>{{Ten}}</td>
+                              <td><img src="/images/{{Anh}}/1.jpg" width="70dp" height="50dp" onclick="window.location.href='/detail/{{Masp}}'"></td>
                               <td>{{Soluong}}</td>
                               <td>{{Gia}}</td>
                               <td>{{Tong}}</td>
@@ -71,8 +74,5 @@
             </div>
         </div>
         <br>
-    <div class="col-md-2">
-        <button type="button" class="btn btn-large btn-block btn-danger" onclick="window.location.href='/dashboard'">Back To Dashboard</button>
-        </div>
-    </div>
 </div>
+{{/if}}

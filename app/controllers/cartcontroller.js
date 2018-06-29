@@ -35,7 +35,7 @@ router.get('/mycart', (req, res) => {
 router.post('/add', (req, res) => {
     var item = {
         Masp: req.body.proId,
-        Quantity: 1
+        Quantity: +req.body.quantity
     };
     console.log(item);
     cartrepo.add(req.session.cart, item);
@@ -85,35 +85,58 @@ router.post('/billpay', (req, res) => {
         mkdate: date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate()
     }
     var arr_p = [];
+    var itemsquanti = [];
     for (var i = 0; i < req.session.cart.length; i++) {
         var cartItem = req.session.cart[i];
-        var p = adminrepo.single(cartItem.Masp);
-        arr_p.push(p);
+        adminrepo.single(cartItem.Masp).then(p => {
+            arr_p.push(p);
+
+        });
+
     }
-    var items = [];
+    for (var i = 0; i < req.session.cart.length; i++) {
+        var quan = req.session.cart[i].Quantity;
+        itemsquanti.push(quan);
+    }
+
     cartrepo.addbill(bill).then(row => {
         cartrepo.getbillid(bill.email).then(rowid => {
             var billid = rowid[0].ID;
-            console.log(billid);
-            Promise.all(arr_p).then(result => {
+            Promise.all([arr_p, itemsquanti]).then(([result, qui]) => {
                 for (var i = result.length - 1; i >= 0; i--) {
                     var pro = result[i][0];
+                    console.log(result.length);
                     var ctdh = {
                         madh: billid,
-                        masp: req.session.cart[i].Masp,
-                        soluong: req.session.cart[i].Quantity,
+                        masp: pro.Masp,
+                        soluong: qui[i],
                         gia: pro.Gia,
-                        tong: pro.Gia * req.session.cart[i].Quantity
+                        tong: pro.Gia * qui[i]
                     }
-                    console.log(ctdh);
                     cartrepo.addbilldetail(ctdh);
+                    cartrepo.updateby(ctdh.masp,ctdh.soluong);
+                    cartrepo.updateslt(ctdh.masp,ctdh.soluong);
                 }
             });
 
         });
 
     });
+    cartrepo.removeall(req.session.cart);
     res.redirect('/');
+});
+router.post('/addcate', (req, res) => {
+    var id=req.body.proId;
+    var quan=+req.body.quantity;
+    cartrepo.getquantity(id).then(row=>{
+        var qu=row[0].slt;
+        var quanity=qu+quan
+        console.log(qu);
+        console.log(id);
+        cartrepo.addcate(id,quanity);
+        res.redirect(req.headers.referer);
+    });
+
 });
 
 

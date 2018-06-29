@@ -1,3 +1,4 @@
+{{#if layoutVM.isLogged}}
 <div class="page-head">
     <div class="container">
         <h3>Check Out</h3>
@@ -34,16 +35,21 @@
                     <td class="invert">
                         <div class="quantity">
                             <div class="quantity-select">
-                                
-                                <button type="button" class="btn btn-warning">-</button>
-                                
+
+                                <form name="frrms" method="post" action="/cart/add">
+                                    <input name="proId" type="hidden" value="{{product.Masp}}">
+                                    <input id="txtQ" name="quantity" type="hidden" class="form-control" value="-1">
+                                    <button type="submit" class="btn btn-warning">-</button>
+                                </form>
+
                                 <div class="entry value">
                                     <span>{{Quantity}}</span>
                                 </div>
-                                <form name="frmrm" method="post" action="/cart/add">
-                                <input type="hidden" name="proId" value="{{product.Masp}}">
-                                 <button type="submit" class="btn btn-warning">+</button>
-                                 </form>
+                                <form name="frrm" method="post" action="/cart/add">
+                                    <input name="proId" type="hidden" value="{{product.Masp}}">
+                                    <input id="txtQ" name="quantity" type="hidden" class="form-control" value="1">
+                                    <button type="submit" class="btn btn-warning">+</button>
+                                </form>
                             </div>
                         </div>
                     </td>
@@ -51,7 +57,7 @@
                     <td class="invert">{{Amount}}</td>
                     <td class="invert-closeb">
                         <form name="frmrm" method="post" action="/cart/remove">
-                        <input value="{{product.Masp}}" name="ProID" type="hidden">
+                            <input value="{{product.Masp}}" name="ProID" type="hidden">
                             <div class="rem">
                                 <button type="submit" class="col-md-1 btn btn-large btn-block btn-danger">
                                     <div>
@@ -96,3 +102,4 @@
         </div>
     </div>
 </div>
+{{/if}}

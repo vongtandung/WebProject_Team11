@@ -74,11 +74,11 @@
                     </div>
                     <div class="section_room">
                         <select name="categS" id="country" onchange="change_country(this.value)" class="frm-field required">
-                            <option >All categories</option>
-                            <option >Men</option>
-                            <option >Women</option>
-                            <option >Kid</option>
-                            <option >Unisex</option>
+                            <option >All</option>
+                            <option >Balo</option>
+                            <option >TUiXach</option>
+                            <option >Vi</option>
+                            <option >Vali</option>
                         </select>
                     </div>
                     <div class="sear-sub">
@@ -92,7 +92,7 @@
             <div class="login button mr-3">
                 <div class="btn-group" style="float: right">
                     <button type="button" class="btn btn-warning btn-lg dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Xin chào,&nbsp; {{layoutVM.curUser.Name}}
+                     Hi,&nbsp; {{layoutVM.curUser.Name}}
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
@@ -103,11 +103,11 @@
                         <li>
                              <a href="/dashboard" target=_blank>Trang Quản Lý</a>
                         </li>
-                        {{else}}
+                        {{/if}}
                         <li>
                             <a href="/account/history" target=_blank>Lịch Sử Mua Hàng</a>
                         </li>
-                        {{/if}}
+                        
                         <li role="separator" class="divider"></li>
                         <li>
                             <form method="post" id="frlogout" action="/account/logout">
